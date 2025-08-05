@@ -955,7 +955,7 @@ class PRTSGui:
         # 退出程序
         self.root.destroy()
         
-if __name__ == "__main__":
+def main():
     import tkinter as tk
     root = tk.Tk()
     app = PRTSGui(root)
