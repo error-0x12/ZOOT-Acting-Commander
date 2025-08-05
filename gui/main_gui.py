@@ -212,7 +212,7 @@ class PRTSGui:
         # 添加说明文本
         desc = tk.Label(
             self.content_area, 
-            text="点击后将自动完成基建中的所有可完成事项\n请确保已在基建界面，且通知按钮可见", 
+            text="点击后将自动完成基建中的所有可完成事项\n请确保已在首页界面，且游戏窗口可见", 
             font=font.Font(family="SimHei", size=10),
             bg="#1a1a1a", 
             fg="#cccccc",
@@ -478,7 +478,7 @@ class PRTSGui:
         
         opacity_label = tk.Label(
             opacity_frame, 
-            text="日志窗口透明度: ", 
+            text="日志窗口不透明度: ", 
             font=font.Font(family="SimHei", size=10),
             bg="#1a1a1a", 
             fg="#cccccc"
@@ -960,3 +960,6 @@ def main():
     root = tk.Tk()
     app = PRTSGui(root)
     root.mainloop()
+
+if __name__ == "__main__":
+    main()
