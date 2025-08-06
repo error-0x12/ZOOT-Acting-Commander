@@ -330,7 +330,7 @@ class PRTSGui:
             state="readonly",
             width=10
         )
-        level_option['values'] = ("龙门外环",)
+        level_option['values'] = ("龙门外环", "龙门市区", "当期委托地点")
         level_option.pack(side=tk.LEFT)
 
         # 最大模式复选框
@@ -364,7 +364,7 @@ class PRTSGui:
         # 添加说明文本
         desc = tk.Label(
             eliminate_frame, 
-            text="点击后将自动进行剿灭作战\n请确保已在主菜单界面", 
+            text="点击后将自动进行剿灭作战\n请确保已在主菜单界面\n请确保已解锁当前关卡的“代理指挥”功能", 
             font=font.Font(family="SimHei", size=10),
             bg="#1a1a1a", 
             fg="#cccccc",
@@ -773,6 +773,16 @@ class PRTSGui:
             
             if selected_level == "龙门外环":
                 if not combat_manager.navigate_to_longmen(threshold=threshold):
+                    logger.error(f"无法导航到{selected_level}")
+                    messagebox.showerror("失败", f"无法导航到{selected_level}")
+                    return
+            elif selected_level == "龙门市区":
+                if not combat_manager.navigate_to_longmen_city(threshold=threshold):
+                    logger.error(f"无法导航到{selected_level}")
+                    messagebox.showerror("失败", f"无法导航到{selected_level}")
+                    return
+            elif selected_level == "当期委托地点":
+                if not combat_manager.navigate_to_current_commission(threshold=threshold):
                     logger.error(f"无法导航到{selected_level}")
                     messagebox.showerror("失败", f"无法导航到{selected_level}")
                     return

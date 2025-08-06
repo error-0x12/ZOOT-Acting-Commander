@@ -1,0 +1,566 @@
+2025-08-06 01:04:39,540 - PRTS - INFO - 开始执行领取任务奖励功能...
+2025-08-06 01:04:44,857 - PRTS - INFO - 正在尝试领取任务奖励...
+2025-08-06 01:04:44,867 - PRTS - INFO - 开始领取任务奖励流程
+2025-08-06 01:04:46,832 - PRTS - INFO - 成功点击主任务按钮
+2025-08-06 01:04:48,837 - PRTS - INFO - 开始领取日常任务奖励
+2025-08-06 01:04:50,584 - PRTS - INFO - 成功点击日常任务按钮
+2025-08-06 01:04:55,236 - PRTS - WARNING - 未找到日常任务全部领取按钮，跳过: 未找到匹配的模板: get_all_btn.png, 最大匹配值: 0.4342329204082489
+2025-08-06 01:04:55,275 - PRTS - INFO - 开始领取每周任务奖励
+2025-08-06 01:04:57,001 - PRTS - INFO - 成功点击每周任务按钮
+2025-08-06 01:05:02,883 - PRTS - INFO - 成功点击每周任务全部领取按钮
+2025-08-06 01:05:07,068 - PRTS - INFO - 原地点击确认
+2025-08-06 01:05:09,098 - PRTS - INFO - 准备返回主页
+2025-08-06 01:05:10,949 - PRTS - INFO - 成功点击顶部栏
+2025-08-06 01:05:13,701 - PRTS - INFO - 成功点击首页按钮，返回主页
+2025-08-06 01:05:15,731 - PRTS - INFO - 任务奖励领取流程完成
+2025-08-06 01:05:15,747 - PRTS - INFO - 领取任务奖励成功!
+2025-08-06 01:12:03,773 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:12:03,790 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\templates\remaining_sanity.png
+2025-08-06 01:12:05,607 - PRTS - INFO - 图像文字识别结果: B 之 泳
+2025-08-06 01:12:05,710 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:12:05,712 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:12:06,971 - PRTS - INFO - 屏幕区域文字识别结果: 文 枕
+2025-08-06 01:12:07,575 - PRTS - ERROR - 模板文字识别测试失败: name 'ElementNotFoundError' is not defined
+2025-08-06 01:14:32,192 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:14:32,195 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\templates\remaining_sanity.png
+2025-08-06 01:14:33,473 - PRTS - INFO - 图像文字识别结果: B 之 泳
+2025-08-06 01:14:33,575 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:14:33,577 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:14:34,711 - PRTS - INFO - 屏幕区域文字识别结果: 文 枕
+2025-08-06 01:14:35,040 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:16:44,170 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:16:44,172 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\templates\remaining_sanity.png
+2025-08-06 01:16:44,180 - PRTS - ERROR - 文字识别测试失败: 文字识别失败
+2025-08-06 01:17:27,079 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:17:27,081 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\templates\remaining_sanity.png
+2025-08-06 01:17:28,373 - PRTS - INFO - 图像文字识别结果 (配置 1): B 之 泳
+2025-08-06 01:17:29,779 - PRTS - INFO - 图像文字识别结果 (配置 2): B 之 泳
+2025-08-06 01:17:30,821 - PRTS - INFO - 图像文字识别结果 (配置 3): 9 之 沥
+2025-08-06 01:17:31,968 - PRTS - INFO - 图像文字识别结果 (配置 4): 
+2025-08-06 01:17:33,217 - PRTS - INFO - 图像文字识别结果 (配置 5): B 之 泳
+2025-08-06 01:17:33,336 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:17:33,338 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:17:34,799 - PRTS - INFO - 屏幕区域文字识别结果: 文 件
+2025-08-06 01:17:35,101 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:18:26,889 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:18:26,892 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\templates\remaining_sanity.png
+2025-08-06 01:18:26,903 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 01:18:28,176 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: B 之 泳
+2025-08-06 01:18:29,357 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: B 之 泳
+2025-08-06 01:18:30,483 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: ES
+2025-08-06 01:18:30,485 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 01:18:31,642 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: B 之 泳
+2025-08-06 01:18:32,917 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: B 之 泳
+2025-08-06 01:18:34,552 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: ES
+2025-08-06 01:18:34,553 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 01:18:35,768 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: B 之 泳
+2025-08-06 01:18:36,845 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: B 之 泳
+2025-08-06 01:18:37,888 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: ES
+2025-08-06 01:18:37,889 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 01:18:38,919 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: 怀 之 “ 沟
+2025-08-06 01:18:40,320 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: 怀 之 “ 沟
+2025-08-06 01:18:41,590 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: Eos
+2025-08-06 01:18:41,697 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:18:41,699 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:18:43,165 - PRTS - INFO - 屏幕区域文字识别结果: 文 件 Anca
+2025-08-06 01:18:43,599 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:21:13,710 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:21:13,719 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:21:13,734 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 01:21:15,299 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:21:16,345 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:21:17,402 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:21:17,405 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 01:21:18,383 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:21:19,549 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:21:20,710 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:21:20,711 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 01:21:21,729 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:21:22,706 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:21:23,780 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: EE
+2025-08-06 01:21:23,781 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 01:21:24,862 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: cs Es Eo
+2025-08-06 01:21:25,833 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: cs Es Eo
+2025-08-06 01:21:26,922 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: EE
+2025-08-06 01:21:27,008 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:21:27,009 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:21:27,980 - PRTS - INFO - 屏幕区域文字识别结果: 文 件
+2025-08-06 01:21:28,285 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:22:10,757 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:22:10,760 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:22:10,778 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 01:22:11,835 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:22:13,128 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:22:14,357 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:22:15,432 - PRTS - INFO - 原始图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:22:16,428 - PRTS - INFO - 原始图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:22:16,431 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 01:22:17,428 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:22:18,545 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:22:19,627 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:22:20,594 - PRTS - INFO - 灰度图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:22:21,576 - PRTS - INFO - 灰度图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:22:21,577 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 01:22:22,561 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:22:23,689 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:22:24,815 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: EE
+2025-08-06 01:22:25,741 - PRTS - INFO - 阈值处理 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:22:26,835 - PRTS - INFO - 阈值处理 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:22:26,836 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 01:22:27,771 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: cs Es Eo
+2025-08-06 01:22:28,975 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: cs Es Eo
+2025-08-06 01:22:30,001 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: EE
+2025-08-06 01:22:30,961 - PRTS - INFO - 高斯模糊+阈值 (配置 4) 文字识别结果: cs Es Eo
+2025-08-06 01:22:32,019 - PRTS - INFO - 高斯模糊+阈值 (配置 5) 文字识别结果: cs Es Eo
+
+a Ew
+2025-08-06 01:22:32,021 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_自适应阈值.png
+2025-08-06 01:22:33,268 - PRTS - INFO - 自适应阈值 (配置 1) 文字识别结果: 
+2025-08-06 01:22:34,631 - PRTS - INFO - 自适应阈值 (配置 2) 文字识别结果: 
+2025-08-06 01:22:35,938 - PRTS - INFO - 自适应阈值 (配置 3) 文字识别结果: 
+2025-08-06 01:22:37,233 - PRTS - INFO - 自适应阈值 (配置 4) 文字识别结果: 
+2025-08-06 01:22:38,494 - PRTS - INFO - 自适应阈值 (配置 5) 文字识别结果: care
+2025-08-06 01:22:38,495 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_中值滤波+阈值.png
+2025-08-06 01:22:39,994 - PRTS - INFO - 中值滤波+阈值 (配置 1) 文字识别结果: Es Es Ee
+2025-08-06 01:22:41,293 - PRTS - INFO - 中值滤波+阈值 (配置 2) 文字识别结果: Es Es Ee
+2025-08-06 01:22:42,750 - PRTS - INFO - 中值滤波+阈值 (配置 3) 文字识别结果: sEsE
+2025-08-06 01:22:44,023 - PRTS - INFO - 中值滤波+阈值 (配置 4) 文字识别结果: Es Es Ee
+2025-08-06 01:22:45,161 - PRTS - INFO - 中值滤波+阈值 (配置 5) 文字识别结果: Cs Es Es
+
+Zs Ew
+2025-08-06 01:22:45,260 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:22:45,262 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:22:46,281 - PRTS - INFO - 屏幕区域文字识别结果: 文 件
+2025-08-06 01:22:46,590 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:26:22,510 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:26:22,512 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:26:22,523 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 01:26:23,671 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:26:25,061 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:26:26,435 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:26:27,675 - PRTS - INFO - 原始图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:26:29,138 - PRTS - INFO - 原始图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:26:29,154 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 01:26:30,354 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:26:31,357 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:26:32,459 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:26:33,546 - PRTS - INFO - 灰度图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:26:34,808 - PRTS - INFO - 灰度图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:26:34,808 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 01:26:36,138 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:26:37,175 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:26:38,206 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: EE
+2025-08-06 01:26:39,409 - PRTS - INFO - 阈值处理 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:26:40,628 - PRTS - INFO - 阈值处理 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:26:40,629 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 01:26:41,756 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: cs Es Eo
+2025-08-06 01:26:42,795 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: cs Es Eo
+2025-08-06 01:26:44,101 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: EE
+2025-08-06 01:26:45,445 - PRTS - INFO - 高斯模糊+阈值 (配置 4) 文字识别结果: cs Es Eo
+2025-08-06 01:26:46,526 - PRTS - INFO - 高斯模糊+阈值 (配置 5) 文字识别结果: cs Es Eo
+
+a Ew
+2025-08-06 01:26:46,527 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_自适应阈值.png
+2025-08-06 01:26:47,635 - PRTS - INFO - 自适应阈值 (配置 1) 文字识别结果: 
+2025-08-06 01:26:48,576 - PRTS - INFO - 自适应阈值 (配置 2) 文字识别结果: 
+2025-08-06 01:26:49,587 - PRTS - INFO - 自适应阈值 (配置 3) 文字识别结果: 
+2025-08-06 01:26:50,666 - PRTS - INFO - 自适应阈值 (配置 4) 文字识别结果: 
+2025-08-06 01:26:51,682 - PRTS - INFO - 自适应阈值 (配置 5) 文字识别结果: care
+2025-08-06 01:26:51,683 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_中值滤波+阈值.png
+2025-08-06 01:26:52,792 - PRTS - INFO - 中值滤波+阈值 (配置 1) 文字识别结果: Es Es Ee
+2025-08-06 01:26:53,867 - PRTS - INFO - 中值滤波+阈值 (配置 2) 文字识别结果: Es Es Ee
+2025-08-06 01:26:55,010 - PRTS - INFO - 中值滤波+阈值 (配置 3) 文字识别结果: sEsE
+2025-08-06 01:26:56,368 - PRTS - INFO - 中值滤波+阈值 (配置 4) 文字识别结果: Es Es Ee
+2025-08-06 01:26:57,796 - PRTS - INFO - 中值滤波+阈值 (配置 5) 文字识别结果: Cs Es Es
+
+Zs Ew
+2025-08-06 01:26:57,888 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 01:26:57,890 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 01:26:59,240 - PRTS - INFO - 屏幕区域文字识别结果: 文 枕
+2025-08-06 01:26:59,586 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458113431930542
+2025-08-06 01:30:26,814 - PRTS - WARNING - 未找到easyocr库，将使用pytesseract
+2025-08-06 01:30:28,141 - PRTS - INFO - 成功导入pytesseract库
+2025-08-06 01:30:28,142 - PRTS - INFO - 检测器初始化成功
+2025-08-06 01:30:28,145 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:30:28,159 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 01:30:29,595 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:30:30,745 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:30:31,865 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:30:32,911 - PRTS - INFO - 原始图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:30:34,016 - PRTS - INFO - 原始图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:30:34,019 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 01:30:35,043 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:30:36,054 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:30:37,150 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: EE
+2025-08-06 01:30:38,151 - PRTS - INFO - 灰度图像 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:30:39,601 - PRTS - INFO - 灰度图像 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:30:39,607 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 01:30:41,328 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: Es Eo
+2025-08-06 01:30:43,009 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: Es Eo
+2025-08-06 01:30:44,756 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: EE
+2025-08-06 01:30:45,957 - PRTS - INFO - 阈值处理 (配置 4) 文字识别结果: Es Eo
+2025-08-06 01:30:47,003 - PRTS - INFO - 阈值处理 (配置 5) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:30:47,004 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 01:30:47,943 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: cs Es Eo
+2025-08-06 01:30:48,987 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: cs Es Eo
+2025-08-06 01:30:50,052 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: EE
+2025-08-06 01:30:50,953 - PRTS - INFO - 高斯模糊+阈值 (配置 4) 文字识别结果: cs Es Eo
+2025-08-06 01:30:51,979 - PRTS - INFO - 高斯模糊+阈值 (配置 5) 文字识别结果: cs Es Eo
+
+a Ew
+2025-08-06 01:30:51,980 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_自适应阈值.png
+2025-08-06 01:30:52,979 - PRTS - INFO - 自适应阈值 (配置 1) 文字识别结果: 
+2025-08-06 01:30:53,974 - PRTS - INFO - 自适应阈值 (配置 2) 文字识别结果: 
+2025-08-06 01:30:54,955 - PRTS - INFO - 自适应阈值 (配置 3) 文字识别结果: 
+2025-08-06 01:30:55,888 - PRTS - INFO - 自适应阈值 (配置 4) 文字识别结果: 
+2025-08-06 01:30:56,969 - PRTS - INFO - 自适应阈值 (配置 5) 文字识别结果: care
+2025-08-06 01:30:56,970 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_中值滤波+阈值.png
+2025-08-06 01:30:58,000 - PRTS - INFO - 中值滤波+阈值 (配置 1) 文字识别结果: Es Es Ee
+2025-08-06 01:30:59,227 - PRTS - INFO - 中值滤波+阈值 (配置 2) 文字识别结果: Es Es Ee
+2025-08-06 01:31:00,289 - PRTS - INFO - 中值滤波+阈值 (配置 3) 文字识别结果: sEsE
+2025-08-06 01:31:01,259 - PRTS - INFO - 中值滤波+阈值 (配置 4) 文字识别结果: Es Es Ee
+2025-08-06 01:39:06,972 - PRTS - WARNING - 未找到easyocr库，将使用pytesseract
+2025-08-06 01:39:07,818 - PRTS - INFO - 成功导入pytesseract库
+2025-08-06 01:39:07,820 - PRTS - INFO - 测试OCR引擎: auto
+2025-08-06 01:39:07,820 - PRTS - INFO - 检测器初始化成功 (引擎: auto)
+2025-08-06 01:39:07,823 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:39:07,834 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_原始图像.png
+2025-08-06 01:39:08,957 - PRTS - INFO - auto - 原始图像 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:10,070 - PRTS - INFO - auto - 原始图像 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:11,054 - PRTS - INFO - auto - 原始图像 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:12,146 - PRTS - INFO - auto - 原始图像 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:13,236 - PRTS - INFO - auto - 原始图像 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:13,240 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_灰度图像.png
+2025-08-06 01:39:14,423 - PRTS - INFO - auto - 灰度图像 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:15,410 - PRTS - INFO - auto - 灰度图像 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:16,377 - PRTS - INFO - auto - 灰度图像 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:17,326 - PRTS - INFO - auto - 灰度图像 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:18,296 - PRTS - INFO - auto - 灰度图像 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:18,297 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_阈值处理.png
+2025-08-06 01:39:19,390 - PRTS - INFO - auto - 阈值处理 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:20,433 - PRTS - INFO - auto - 阈值处理 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:21,384 - PRTS - INFO - auto - 阈值处理 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:22,320 - PRTS - INFO - auto - 阈值处理 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:23,305 - PRTS - INFO - auto - 阈值处理 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:23,306 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_高斯模糊+阈值.png
+2025-08-06 01:39:24,350 - PRTS - INFO - auto - 高斯模糊+阈值 (--psm 7) 文字识别结果: cs Es Eo
+2025-08-06 01:39:25,421 - PRTS - INFO - auto - 高斯模糊+阈值 (--psm 7 --oem 3) 文字识别结果: cs Es Eo
+2025-08-06 01:39:26,318 - PRTS - INFO - auto - 高斯模糊+阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:27,278 - PRTS - INFO - auto - 高斯模糊+阈值 (--psm 6 --oem 3) 文字识别结果: cs Es Eo
+2025-08-06 01:39:28,276 - PRTS - INFO - auto - 高斯模糊+阈值 (--psm 11 --oem 3) 文字识别结果: cs Es Eo
+
+a Ew
+2025-08-06 01:39:28,278 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_自适应阈值.png
+2025-08-06 01:39:29,316 - PRTS - INFO - auto - 自适应阈值 (--psm 7) 文字识别结果: 
+2025-08-06 01:39:30,397 - PRTS - INFO - auto - 自适应阈值 (--psm 7 --oem 3) 文字识别结果: 
+2025-08-06 01:39:31,300 - PRTS - INFO - auto - 自适应阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: 
+2025-08-06 01:39:32,303 - PRTS - INFO - auto - 自适应阈值 (--psm 6 --oem 3) 文字识别结果: 
+2025-08-06 01:39:33,259 - PRTS - INFO - auto - 自适应阈值 (--psm 11 --oem 3) 文字识别结果: care
+2025-08-06 01:39:33,260 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_auto_中值滤波+阈值.png
+2025-08-06 01:39:34,253 - PRTS - INFO - auto - 中值滤波+阈值 (--psm 7) 文字识别结果: Es Es Ee
+2025-08-06 01:39:35,232 - PRTS - INFO - auto - 中值滤波+阈值 (--psm 7 --oem 3) 文字识别结果: Es Es Ee
+2025-08-06 01:39:36,200 - PRTS - INFO - auto - 中值滤波+阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: sEsE
+2025-08-06 01:39:37,090 - PRTS - INFO - auto - 中值滤波+阈值 (--psm 6 --oem 3) 文字识别结果: Es Es Ee
+2025-08-06 01:39:38,046 - PRTS - INFO - auto - 中值滤波+阈值 (--psm 11 --oem 3) 文字识别结果: Cs Es Es
+
+Zs Ew
+2025-08-06 01:39:38,084 - PRTS - INFO - 成功捕获屏幕区域
+2025-08-06 01:39:38,086 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\auto_text_recognition_debug.png
+2025-08-06 01:39:39,333 - PRTS - INFO - auto - 屏幕区域文字识别结果: 文 件
+2025-08-06 01:39:39,710 - PRTS - WARNING - auto - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.4581121504306793
+2025-08-06 01:39:39,712 - PRTS - INFO - 测试OCR引擎: tesseract
+2025-08-06 01:39:39,713 - PRTS - INFO - 检测器初始化成功 (引擎: tesseract)
+2025-08-06 01:39:39,716 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 01:39:39,723 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_原始图像.png
+2025-08-06 01:39:40,859 - PRTS - INFO - tesseract - 原始图像 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:41,812 - PRTS - INFO - tesseract - 原始图像 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:42,804 - PRTS - INFO - tesseract - 原始图像 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:43,876 - PRTS - INFO - tesseract - 原始图像 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:44,995 - PRTS - INFO - tesseract - 原始图像 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:44,998 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_灰度图像.png
+2025-08-06 01:39:46,236 - PRTS - INFO - tesseract - 灰度图像 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:47,308 - PRTS - INFO - tesseract - 灰度图像 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:48,478 - PRTS - INFO - tesseract - 灰度图像 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:49,617 - PRTS - INFO - tesseract - 灰度图像 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:51,310 - PRTS - INFO - tesseract - 灰度图像 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:51,311 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_阈值处理.png
+2025-08-06 01:39:52,469 - PRTS - INFO - tesseract - 阈值处理 (--psm 7) 文字识别结果: Es Eo
+2025-08-06 01:39:53,572 - PRTS - INFO - tesseract - 阈值处理 (--psm 7 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:54,624 - PRTS - INFO - tesseract - 阈值处理 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:39:55,557 - PRTS - INFO - tesseract - 阈值处理 (--psm 6 --oem 3) 文字识别结果: Es Eo
+2025-08-06 01:39:56,622 - PRTS - INFO - tesseract - 阈值处理 (--psm 11 --oem 3) 文字识别结果: Es Eo
+
+Za Ew
+2025-08-06 01:39:56,623 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_高斯模糊+阈值.png
+2025-08-06 01:39:57,710 - PRTS - INFO - tesseract - 高斯模糊+阈值 (--psm 7) 文字识别结果: cs Es Eo
+2025-08-06 01:39:58,777 - PRTS - INFO - tesseract - 高斯模糊+阈值 (--psm 7 --oem 3) 文字识别结果: cs Es Eo
+2025-08-06 01:39:59,810 - PRTS - INFO - tesseract - 高斯模糊+阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: EE
+2025-08-06 01:40:01,275 - PRTS - INFO - tesseract - 高斯模糊+阈值 (--psm 6 --oem 3) 文字识别结果: cs Es Eo
+2025-08-06 01:40:03,202 - PRTS - INFO - tesseract - 高斯模糊+阈值 (--psm 11 --oem 3) 文字识别结果: cs Es Eo
+
+a Ew
+2025-08-06 01:40:03,207 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_自适应阈值.png
+2025-08-06 01:40:05,065 - PRTS - INFO - tesseract - 自适应阈值 (--psm 7) 文字识别结果: 
+2025-08-06 01:40:07,310 - PRTS - INFO - tesseract - 自适应阈值 (--psm 7 --oem 3) 文字识别结果: 
+2025-08-06 01:40:09,900 - PRTS - INFO - tesseract - 自适应阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: 
+2025-08-06 01:40:11,848 - PRTS - INFO - tesseract - 自适应阈值 (--psm 6 --oem 3) 文字识别结果: 
+2025-08-06 01:40:14,109 - PRTS - INFO - tesseract - 自适应阈值 (--psm 11 --oem 3) 文字识别结果: care
+2025-08-06 01:40:14,111 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_tesseract_中值滤波+阈值.png
+2025-08-06 01:40:16,373 - PRTS - INFO - tesseract - 中值滤波+阈值 (--psm 7) 文字识别结果: Es Es Ee
+2025-08-06 01:40:18,055 - PRTS - INFO - tesseract - 中值滤波+阈值 (--psm 7 --oem 3) 文字识别结果: Es Es Ee
+2025-08-06 01:40:19,923 - PRTS - INFO - tesseract - 中值滤波+阈值 (--psm 7 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz) 文字识别结果: sEsE
+2025-08-06 01:40:21,717 - PRTS - INFO - tesseract - 中值滤波+阈值 (--psm 6 --oem 3) 文字识别结果: Es Es Ee
+2025-08-06 01:40:23,438 - PRTS - INFO - tesseract - 中值滤波+阈值 (--psm 11 --oem 3) 文字识别结果: Cs Es Es
+
+Zs Ew
+2025-08-06 01:40:23,452 - PRTS - INFO - 成功捕获屏幕区域
+2025-08-06 01:40:23,456 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\tesseract_text_recognition_debug.png
+2025-08-06 01:40:25,538 - PRTS - INFO - tesseract - 屏幕区域文字识别结果: [
+2025-08-06 01:40:26,360 - PRTS - WARNING - tesseract - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.4755972623825073
+2025-08-06 01:50:14,108 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 01:50:14,125 - easyocr.easyocr - WARNING - Downloading detection model, please wait. This may take several minutes depending upon your network connection.
+2025-08-06 01:53:54,833 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 01:53:54,846 - easyocr.easyocr - WARNING - Downloading detection model, please wait. This may take several minutes depending upon your network connection.
+2025-08-06 02:02:55,428 - easyocr.easyocr - INFO - Download complete
+2025-08-06 02:02:55,429 - easyocr.easyocr - WARNING - Downloading recognition model, please wait. This may take several minutes depending upon your network connection.
+2025-08-06 02:08:59,282 - easyocr.easyocr - INFO - Download complete.
+2025-08-06 02:09:01,673 - PRTS - INFO - 检测器初始化成功
+2025-08-06 02:09:01,678 - PRTS - INFO - 成功加载测试图像: D:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 02:09:01,691 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 02:09:02,680 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:03,618 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:04,551 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:05,518 - PRTS - INFO - 原始图像 (配置 4) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:06,392 - PRTS - INFO - 原始图像 (配置 5) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:06,395 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_灰度图像.png
+2025-08-06 02:09:07,375 - PRTS - INFO - 灰度图像 (配置 1) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:08,287 - PRTS - INFO - 灰度图像 (配置 2) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:09,289 - PRTS - INFO - 灰度图像 (配置 3) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:10,271 - PRTS - INFO - 灰度图像 (配置 4) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:11,156 - PRTS - INFO - 灰度图像 (配置 5) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:11,157 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_阈值处理.png
+2025-08-06 02:09:12,056 - PRTS - INFO - 阈值处理 (配置 1) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:12,924 - PRTS - INFO - 阈值处理 (配置 2) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:13,999 - PRTS - INFO - 阈值处理 (配置 3) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:15,029 - PRTS - INFO - 阈值处理 (配置 4) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:15,910 - PRTS - INFO - 阈值处理 (配置 5) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:15,911 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_高斯模糊+阈值.png
+2025-08-06 02:09:16,891 - PRTS - INFO - 高斯模糊+阈值 (配置 1) 文字识别结果: 董装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:17,868 - PRTS - INFO - 高斯模糊+阈值 (配置 2) 文字识别结果: 董装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:18,827 - PRTS - INFO - 高斯模糊+阈值 (配置 3) 文字识别结果: 董装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:19,877 - PRTS - INFO - 高斯模糊+阈值 (配置 4) 文字识别结果: 董装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:20,789 - PRTS - INFO - 高斯模糊+阈值 (配置 5) 文字识别结果: 董装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:09:20,790 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_自适应阈值.png
+2025-08-06 02:09:22,065 - PRTS - INFO - 自适应阈值 (配置 1) 文字识别结果: 筻 圆 辅眺 圆 觅 逅战俭 新手
+2025-08-06 02:09:23,249 - PRTS - INFO - 自适应阈值 (配置 2) 文字识别结果: 筻 圆 辅眺 圆 觅 逅战俭 新手
+2025-08-06 02:09:24,639 - PRTS - INFO - 自适应阈值 (配置 3) 文字识别结果: 筻 圆 辅眺 圆 觅 逅战俭 新手
+2025-08-06 02:09:26,065 - PRTS - INFO - 自适应阈值 (配置 4) 文字识别结果: 筻 圆 辅眺 圆 觅 逅战俭 新手
+2025-08-06 02:09:27,240 - PRTS - INFO - 自适应阈值 (配置 5) 文字识别结果: 筻 圆 辅眺 圆 觅 逅战俭 新手
+2025-08-06 02:09:27,241 - PRTS - INFO - 已保存预处理图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_中值滤波+阈值.png
+2025-08-06 02:09:28,445 - PRTS - INFO - 中值滤波+阈值 (配置 1) 文字识别结果: 童失千炱 檑饬千炱 {干千芡 冼战俭 #丢
+2025-08-06 02:09:29,733 - PRTS - INFO - 中值滤波+阈值 (配置 2) 文字识别结果: 童失千炱 檑饬千炱 {干千芡 冼战俭 #丢
+2025-08-06 02:09:31,011 - PRTS - INFO - 中值滤波+阈值 (配置 3) 文字识别结果: 童失千炱 檑饬千炱 {干千芡 冼战俭 #丢
+2025-08-06 02:09:32,171 - PRTS - INFO - 中值滤波+阈值 (配置 4) 文字识别结果: 童失千炱 檑饬千炱 {干千芡 冼战俭 #丢
+2025-08-06 02:09:33,300 - PRTS - INFO - 中值滤波+阈值 (配置 5) 文字识别结果: 童失千炱 檑饬千炱 {干千芡 冼战俭 #丢
+2025-08-06 02:09:33,400 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 02:09:33,402 - PRTS - INFO - 已保存调试图像到: D:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 02:09:33,654 - PRTS - INFO - 屏幕区域文字识别结果: 文件
+2025-08-06 02:09:34,160 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458111971616745
+2025-08-06 02:11:34,761 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:11:37,200 - PRTS - INFO - 检测器初始化成功
+2025-08-06 02:11:37,203 - PRTS - INFO - 成功加载测试图像: d:\code\python\PRTS\PRTS Acting Commander\logs\9d79a969b497169a7dc8f735c3cb3da.png
+2025-08-06 02:11:37,207 - PRTS - INFO - 已保存预处理图像到: d:\code\python\PRTS\PRTS Acting Commander\logs\text_recog_原始图像.png
+2025-08-06 02:11:38,150 - PRTS - INFO - 原始图像 (配置 1) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:11:39,186 - PRTS - INFO - 原始图像 (配置 2) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:11:40,068 - PRTS - INFO - 原始图像 (配置 3) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:11:40,979 - PRTS - INFO - 原始图像 (配置 4) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:11:41,950 - PRTS - INFO - 原始图像 (配置 5) 文字识别结果: 重装干员 辅助干员 先锋干员 近战位 新手
+2025-08-06 02:11:42,053 - PRTS - INFO - 成功捕获屏幕
+2025-08-06 02:11:42,056 - PRTS - INFO - 已保存调试图像到: d:\code\python\PRTS\PRTS Acting Commander\logs\text_recognition_debug.png
+2025-08-06 02:11:42,280 - PRTS - INFO - 屏幕区域文字识别结果: 文件
+2025-08-06 02:11:42,804 - PRTS - WARNING - 未找到模板: 未找到匹配的模板: remaining_sanity.png, 最大匹配值: 0.458111971616745
+2025-08-06 02:14:37,487 - PRTS - INFO - 开始测试理智识别和代理指挥功能...
+2025-08-06 02:14:37,489 - PRTS - INFO - 请在3秒内唤出明日方舟游戏窗口，并确保在作战界面...
+2025-08-06 02:14:37,489 - PRTS - INFO - 当前模板匹配阈值: 0.8
+2025-08-06 02:14:40,490 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:14:43,636 - PRTS - INFO - 正在尝试识别剩余理智...
+2025-08-06 02:14:44,324 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:14:44,324 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:14:44,327 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:14:44,577 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:14:44,577 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:14:45,579 - PRTS - INFO - 正在尝试识别消耗理智...
+2025-08-06 02:14:45,580 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:14:46,581 - PRTS - INFO - 正在尝试计算可执行次数...
+2025-08-06 02:14:47,102 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:14:47,103 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:14:47,105 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:14:47,275 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:14:47,275 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:14:47,277 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:14:47,277 - PRTS - INFO - 计算可执行次数: 6 (剩余理智: 166, 消耗理智: 25)
+2025-08-06 02:14:47,277 - PRTS - INFO - 可执行次数: 6
+2025-08-06 02:14:48,278 - PRTS - INFO - 正在尝试检查并启用代理指挥...
+2025-08-06 02:14:48,934 - PRTS - INFO - 代理指挥已经启用
+2025-08-06 02:14:49,936 - PRTS - INFO - 代理指挥功能测试成功!
+2025-08-06 02:14:49,937 - PRTS - INFO - 理智识别和代理指挥功能测试完成!
+2025-08-06 02:19:15,231 - PRTS - INFO - 开始执行自动剿灭作战功能...
+2025-08-06 02:19:15,254 - PRTS - INFO - 轮次: 1, 最大模式: False, 模板匹配阈值: 0.6
+2025-08-06 02:19:19,626 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:19:21,721 - PRTS - INFO - 正在导航到作战界面...
+2025-08-06 02:19:23,394 - PRTS - INFO - 成功导航到作战界面
+2025-08-06 02:19:25,407 - PRTS - INFO - 正在导航到常态事务...
+2025-08-06 02:19:27,228 - PRTS - INFO - 成功导航到常态事务
+2025-08-06 02:19:29,240 - PRTS - INFO - 正在导航到剿灭作战...
+2025-08-06 02:19:31,110 - PRTS - INFO - 成功导航到剿灭作战
+2025-08-06 02:19:33,120 - PRTS - INFO - 正在导航到龙门市区...
+2025-08-06 02:19:34,962 - PRTS - INFO - 成功点击longmen_01
+2025-08-06 02:19:37,526 - PRTS - INFO - 已记录longmen_03坐标: (966, 207)
+2025-08-06 02:19:38,726 - PRTS - INFO - 成功点击longmen_03向右偏移425像素的位置
+2025-08-06 02:19:41,928 - PRTS - INFO - 成功点击longmen_03向上偏移100像素的位置
+2025-08-06 02:19:41,940 - PRTS - INFO - 成功导航到龙门市区
+2025-08-06 02:19:43,951 - PRTS - INFO - 正在检查并启用代理指挥...
+2025-08-06 02:19:44,647 - PRTS - WARNING - 未找到代理指挥已启用模板: 未找到匹配的模板: d:\code\python\PRTS\PRTS Acting Commander\templates\acting_commander_on.png, 最大匹配值: 0.5854402780532837，尝试检查未启用状态
+2025-08-06 02:19:46,443 - PRTS - INFO - 成功启用代理指挥
+2025-08-06 02:19:49,455 - PRTS - INFO - 开始作战循环，轮次: 1, 最大模式: False
+2025-08-06 02:19:50,066 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:19:50,087 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:19:50,107 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:19:50,327 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:19:50,340 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:19:50,361 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:19:50,973 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:19:51,006 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:19:51,028 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:19:51,238 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:19:51,246 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:19:51,256 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:19:51,267 - PRTS - INFO - 计算可执行次数: 6 (剩余理智: 166, 消耗理智: 25)
+2025-08-06 02:19:51,280 - PRTS - INFO - 剩余理智: 166, 消耗理智: 25, 可执行次数: 6
+2025-08-06 02:19:51,293 - PRTS - INFO - 开始第 1/1 轮作战
+2025-08-06 02:19:51,305 - PRTS - INFO - 步骤1: 尝试点击开始行动按钮模板
+2025-08-06 02:19:53,076 - PRTS - INFO - 成功点击开始行动按钮位置: (1442, 876)
+2025-08-06 02:19:54,091 - PRTS - INFO - 步骤2: 尝试点击开始行动按钮
+2025-08-06 02:19:55,945 - PRTS - INFO - 成功点击开始行动按钮位置: (1391, 697)
+2025-08-06 02:19:57,959 - PRTS - INFO - 等待作战简报模板出现
+2025-08-06 02:20:01,732 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6
+2025-08-06 02:20:05,464 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6
+2025-08-06 02:20:09,032 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6
+2025-08-06 02:20:13,000 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6
+2025-08-06 02:20:16,763 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6
+2025-08-06 02:20:18,594 - PRTS - INFO - 成功点击作战简报模板位置: (229, 591)
+2025-08-06 02:20:24,689 - PRTS - INFO - 正在查找行动结束
+2025-08-06 02:20:26,341 - PRTS - INFO - 成功点击行动结束位置: (262, 343)
+2025-08-06 02:20:31,355 - PRTS - INFO - 第 1/1 轮作战完成
+2025-08-06 02:20:36,369 - PRTS - INFO - 准备返回首页
+2025-08-06 02:20:38,093 - PRTS - INFO - 成功点击顶部栏
+2025-08-06 02:20:39,750 - PRTS - ERROR - 未找到相关元素
+2025-08-06 02:20:39,770 - PRTS - ERROR - 自动剿灭作战失败
+2025-08-06 02:26:39,516 - PRTS - INFO - 开始执行自动剿灭作战功能...
+2025-08-06 02:26:39,542 - PRTS - INFO - 轮次: 1, 最大模式: False, 模板匹配阈值: 0.6
+2025-08-06 02:26:44,090 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:26:46,539 - PRTS - INFO - 正在导航到作战界面...
+2025-08-06 02:26:48,351 - PRTS - INFO - 成功导航到作战界面
+2025-08-06 02:26:50,359 - PRTS - INFO - 正在导航到常态事务...
+2025-08-06 02:26:52,186 - PRTS - INFO - 成功导航到常态事务
+2025-08-06 02:26:54,200 - PRTS - INFO - 正在导航到剿灭作战...
+2025-08-06 02:26:56,185 - PRTS - INFO - 成功导航到剿灭作战
+2025-08-06 02:26:58,195 - PRTS - INFO - 正在导航到当期委托地点...
+2025-08-06 02:26:58,884 - PRTS - ERROR - 执行失败: 未找到元素 - 未找到匹配的模板: d:\code\python\PRTS\PRTS Acting Commander\templates\main_menu_mission_btn.png, 最大匹配值: 0.34063050150871277
+2025-08-06 02:29:20,449 - PRTS - INFO - 开始执行自动剿灭作战功能...
+2025-08-06 02:29:20,459 - PRTS - INFO - 轮次: 1, 最大模式: False, 模板匹配阈值: 0.6
+2025-08-06 02:29:25,436 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:29:27,789 - PRTS - INFO - 正在导航到作战界面...
+2025-08-06 02:29:29,464 - PRTS - INFO - 成功导航到作战界面
+2025-08-06 02:29:31,472 - PRTS - INFO - 正在导航到常态事务...
+2025-08-06 02:29:33,313 - PRTS - INFO - 成功导航到常态事务
+2025-08-06 02:29:35,326 - PRTS - INFO - 正在导航到剿灭作战...
+2025-08-06 02:29:37,115 - PRTS - INFO - 成功导航到剿灭作战
+2025-08-06 02:29:39,127 - PRTS - INFO - 正在导航到当期委托地点...
+2025-08-06 02:29:39,867 - PRTS - ERROR - 执行失败: 未找到元素 - 未找到匹配的模板: d:\code\python\PRTS\PRTS Acting Commander\templates\current_commission_btn.png, 最大匹配值: 0.437035471200943
+2025-08-06 02:33:59,362 - PRTS - INFO - 开始执行自动剿灭作战功能...
+2025-08-06 02:33:59,386 - PRTS - INFO - 轮次: 1, 最大模式: False, 模板匹配阈值: 0.6564516129032258
+2025-08-06 02:34:03,850 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 02:34:06,132 - PRTS - INFO - 正在导航到作战界面...
+2025-08-06 02:34:07,825 - PRTS - INFO - 成功导航到作战界面
+2025-08-06 02:34:09,838 - PRTS - INFO - 正在导航到常态事务...
+2025-08-06 02:34:11,791 - PRTS - INFO - 成功导航到常态事务
+2025-08-06 02:34:13,804 - PRTS - INFO - 正在导航到剿灭作战...
+2025-08-06 02:34:15,689 - PRTS - INFO - 成功导航到剿灭作战
+2025-08-06 02:34:17,707 - PRTS - INFO - 正在导航到当期委托地点...
+2025-08-06 02:34:19,504 - PRTS - INFO - 成功点击longmen_01
+2025-08-06 02:34:23,356 - PRTS - INFO - 成功点击当期委托按钮
+2025-08-06 02:34:23,365 - PRTS - INFO - 成功导航到当期委托地点
+2025-08-06 02:34:25,378 - PRTS - INFO - 正在检查并启用代理指挥...
+2025-08-06 02:34:25,988 - PRTS - WARNING - 未找到代理指挥已启用模板: 未找到匹配的模板: d:\code\python\PRTS\PRTS Acting Commander\templates\acting_commander_on.png, 最大匹配值: 0.5742271542549133，尝试检查未启用状态
+2025-08-06 02:34:27,706 - PRTS - INFO - 成功启用代理指挥
+2025-08-06 02:34:30,719 - PRTS - INFO - 开始作战循环，轮次: 1, 最大模式: False
+2025-08-06 02:34:31,339 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:34:31,357 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:34:31,378 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:34:31,647 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:34:31,658 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:34:31,670 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:34:32,260 - PRTS - INFO - 找到剩余理智模板，位置: (1186, 110)，大小: (124, 55)
+2025-08-06 02:34:32,279 - PRTS - INFO - 更新剩余理智区域坐标: (1441, 92, 1586, 137)
+2025-08-06 02:34:32,292 - PRTS - INFO - 已保存剩余理智调试图像到: logs\remaining_sanity_debug.png
+2025-08-06 02:34:32,473 - PRTS - INFO - 识别到的原始文本: '166/166'
+2025-08-06 02:34:32,487 - PRTS - INFO - 识别到剩余理智数量: 166
+2025-08-06 02:34:32,498 - PRTS - INFO - 消耗理智数量固定为25
+2025-08-06 02:34:32,510 - PRTS - INFO - 计算可执行次数: 6 (剩余理智: 166, 消耗理智: 25)
+2025-08-06 02:34:32,524 - PRTS - INFO - 剩余理智: 166, 消耗理智: 25, 可执行次数: 6
+2025-08-06 02:34:32,539 - PRTS - INFO - 开始第 1/1 轮作战
+2025-08-06 02:34:32,547 - PRTS - INFO - 步骤1: 尝试点击开始行动按钮模板
+2025-08-06 02:34:34,355 - PRTS - INFO - 成功点击开始行动按钮位置: (1442, 876)
+2025-08-06 02:34:35,368 - PRTS - INFO - 步骤2: 尝试点击开始行动按钮
+2025-08-06 02:34:37,089 - PRTS - INFO - 成功点击开始行动按钮位置: (1391, 697)
+2025-08-06 02:34:39,098 - PRTS - INFO - 等待作战简报模板出现
+2025-08-06 02:34:42,872 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:34:46,590 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:34:50,150 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:34:53,991 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:34:57,841 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:01,664 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:05,566 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:09,419 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:13,275 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:17,082 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:20,887 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:24,731 - PRTS - INFO - 未找到作战简报，当前匹配阈值: 0.6564516129032258
+2025-08-06 02:35:26,572 - PRTS - INFO - 成功点击作战简报模板位置: (229, 591)
+2025-08-06 02:35:32,661 - PRTS - INFO - 正在查找行动结束
+2025-08-06 02:35:34,271 - PRTS - INFO - 成功点击行动结束位置: (262, 343)
+2025-08-06 02:35:39,285 - PRTS - INFO - 第 1/1 轮作战完成
+2025-08-06 02:35:44,301 - PRTS - INFO - 准备返回首页
+2025-08-06 02:35:46,121 - PRTS - INFO - 成功点击顶部栏
+2025-08-06 02:35:48,903 - PRTS - INFO - 成功点击首页按钮，返回首页
+2025-08-06 02:35:49,913 - PRTS - INFO - 自动化剿灭作战流程已完成
+2025-08-06 02:35:49,926 - PRTS - INFO - 自动剿灭作战完成，共执行 1 轮

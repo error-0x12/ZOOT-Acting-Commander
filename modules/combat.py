@@ -35,6 +35,8 @@ class CombatModule:
         self.exterminated_icon_template = os.path.join(TEMPLATES_DIR, 'exterminated_icon.png')
         self.longmen_01_template = os.path.join(TEMPLATES_DIR, 'longmen_01.png')
         self.longmen_02_template = os.path.join(TEMPLATES_DIR, 'longmen_02.png')
+        self.longmen_03_template = os.path.join(TEMPLATES_DIR, 'longmen_03.png')
+        self.current_commission_btn_template = os.path.join(TEMPLATES_DIR, 'current_commission_btn.png')
         # 代理指挥相关模板
         self.acting_commander_off_template = os.path.join(TEMPLATES_DIR, 'acting_commander_off.png')
         self.acting_commander_on_template = os.path.join(TEMPLATES_DIR, 'acting_commander_on.png')
@@ -199,7 +201,7 @@ class CombatModule:
 
     def navigate_to_longmen(self, threshold=0.8):
         """
-        导航到龙门
+        导航到龙门外环
 
         Args:
             threshold (float): 模板匹配阈值，默认为0.8
@@ -256,7 +258,7 @@ class CombatModule:
                 click_y = y3 - 100
                 self.controller.click(click_x, click_y)
                 logger.info("成功点击longmen_02向上偏移100像素的位置")
-                logger.info("成功导航到龙门")
+                logger.info("成功导航到龙门外环")
                 # 清除记录的坐标
                 delattr(self, 'longmen_02_position')
                 return True
@@ -267,7 +269,203 @@ class CombatModule:
         except OperationFailedError:
             raise
         except Exception as e:
-            raise OperationFailedError("导航到龙门") from e
+            raise OperationFailedError("导航到龙门外环") from e
+
+    def navigate_to_longmen_city(self, threshold=0.8):
+        """
+        导航到龙门市区
+
+        Args:
+            threshold (float): 模板匹配阈值，默认为0.8
+
+        Returns:
+            bool: 导航成功返回True，失败返回False
+
+        Raises:
+            ElementNotFoundError: 未找到相关元素时抛出
+            OperationFailedError: 点击操作失败时抛出
+        """
+        try:
+            # 捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找longmen_01模板
+            longmen_01_pos = self.detector.find_template(screenshot, self.longmen_01_template, threshold=threshold)
+
+            if longmen_01_pos:
+                # 点击longmen_01
+                x1, y1, _, _ = longmen_01_pos
+                self.controller.click(x1, y1)
+                logger.info("成功点击longmen_01")
+                time.sleep(2)
+            else:
+                raise ElementNotFoundError('longmen_01.png', "未找到longmen_01模板")
+
+            # 重新捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找longmen_03模板
+            longmen_03_pos = self.detector.find_template(screenshot, self.longmen_03_template, threshold=threshold)
+
+            if longmen_03_pos:
+                # 记录longmen_03的坐标
+                x2, y2, _, _ = longmen_03_pos
+                self.longmen_03_position = (x2, y2)
+                logger.info(f"已记录longmen_03坐标: ({x2}, {y2})")
+                
+                # 点击longmen_03向右偏移425像素的位置
+                click_x = x2 + 425
+                click_y = y2
+                self.controller.click(click_x, click_y)
+                logger.info("成功点击longmen_03向右偏移425像素的位置")
+                time.sleep(2)
+            else:
+                raise ElementNotFoundError('longmen_03.png', "未找到longmen_03模板")
+
+            # 使用之前记录的longmen_03坐标
+            if hasattr(self, 'longmen_03_position'):
+                # 点击longmen_03向上偏移100像素的位置
+                x3, y3 = self.longmen_03_position
+                click_x = x3
+                click_y = y3 - 100
+                self.controller.click(click_x, click_y)
+                logger.info("成功点击longmen_03向上偏移100像素的位置")
+                logger.info("成功导航到龙门市区")
+                # 清除记录的坐标
+                delattr(self, 'longmen_03_position')
+                return True
+            else:
+                raise ElementNotFoundError('longmen_03.png', "未找到longmen_03模板或未记录坐标")
+        except ElementNotFoundError:
+            raise
+        except OperationFailedError:
+            raise
+        except Exception as e:
+            raise OperationFailedError("导航到龙门市区") from e
+
+    def navigate_to_current_commission(self, threshold=0.8):
+        """
+        导航到当期委托地点
+
+        Args:
+            threshold (float): 模板匹配阈值，默认为0.8
+
+        Returns:
+            bool: 导航成功返回True，失败返回False
+
+        Raises:
+            ElementNotFoundError: 未找到相关元素时抛出
+            OperationFailedError: 点击操作失败时抛出
+        """
+        try:
+            # 捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找longmen_01模板
+            longmen_01_pos = self.detector.find_template(screenshot, self.longmen_01_template, threshold=threshold)
+
+            if longmen_01_pos:
+                # 点击longmen_01
+                x1, y1, _, _ = longmen_01_pos
+                self.controller.click(x1, y1)
+                logger.info("成功点击longmen_01")
+                time.sleep(2)
+            else:
+                raise ElementNotFoundError('longmen_01.png', "未找到longmen_01模板")
+
+            # 重新捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找当期委托按钮
+            current_commission_btn_pos = self.detector.find_template(screenshot, self.current_commission_btn_template, threshold=threshold)
+
+            if current_commission_btn_pos:
+                # 点击当期委托按钮
+                x, y, _, _ = current_commission_btn_pos
+                self.controller.click(x, y)
+                logger.info("成功点击当期委托按钮")
+                logger.info("成功导航到当期委托地点")
+                return True
+            else:
+                raise ElementNotFoundError('current_commission_btn.png', "未找到当期委托按钮")
+        except ElementNotFoundError:
+            raise
+        except OperationFailedError:
+            raise
+        except Exception as e:
+            raise OperationFailedError("导航到当期委托地点") from e
+
+    def navigate_to_longmen_city(self, threshold=0.8):
+        """
+        导航到龙门市区
+
+        Args:
+            threshold (float): 模板匹配阈值，默认为0.8
+
+        Returns:
+            bool: 导航成功返回True，失败返回False
+
+        Raises:
+            ElementNotFoundError: 未找到相关元素时抛出
+            OperationFailedError: 点击操作失败时抛出
+        """
+        try:
+            # 捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找longmen_01模板
+            longmen_01_pos = self.detector.find_template(screenshot, self.longmen_01_template, threshold=threshold)
+
+            if longmen_01_pos:
+                # 点击longmen_01
+                x1, y1, _, _ = longmen_01_pos
+                self.controller.click(x1, y1)
+                logger.info("成功点击longmen_01")
+                time.sleep(2)
+            else:
+                raise ElementNotFoundError('longmen_01.png', "未找到longmen_01模板")
+
+            # 重新捕获屏幕截图
+            screenshot = self.detector.capture_screen()
+
+            # 在截图中查找longmen_03模板
+            longmen_03_pos = self.detector.find_template(screenshot, self.longmen_03_template, threshold=threshold)
+
+            if longmen_03_pos:
+                # 记录longmen_03的坐标
+                x2, y2, _, _ = longmen_03_pos
+                self.longmen_03_position = (x2, y2)
+                logger.info(f"已记录longmen_03坐标: ({x2}, {y2})")
+                
+                # 点击longmen_03向右偏移425像素的位置
+                click_x = x2 + 425
+                click_y = y2
+                self.controller.click(click_x, click_y)
+                logger.info("成功点击longmen_03向右偏移425像素的位置")
+                time.sleep(2)
+            else:
+                raise ElementNotFoundError('longmen_03.png', "未找到longmen_03模板")
+
+            # 使用之前记录的longmen_03坐标
+            if hasattr(self, 'longmen_03_position'):
+                # 点击longmen_03向上偏移100像素的位置
+                x3, y3 = self.longmen_03_position
+                click_x = x3
+                click_y = y3 - 100
+                self.controller.click(click_x, click_y)
+                logger.info("成功点击longmen_03向上偏移100像素的位置")
+                logger.info("成功导航到龙门市区")
+                # 清除记录的坐标
+                delattr(self, 'longmen_03_position')
+                return True
+            else:
+                raise ElementNotFoundError('longmen_03.png', "未找到longmen_03模板或未记录坐标")
+        except ElementNotFoundError:
+            raise
+        except OperationFailedError:
+            raise
+        except Exception as e:
+            raise OperationFailedError("导航到龙门市区") from e
 
     def recognize_remaining_sanity(self):
         """

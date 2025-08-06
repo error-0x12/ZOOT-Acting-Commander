@@ -4,7 +4,7 @@
 """
 import cv2
 import numpy as np
-import pytesseract
+import easyocr
 from PIL import Image
 import os
 import logging
@@ -22,8 +22,12 @@ class Detector:
         Args:
             template_dir (str): 模板图像所在目录
         """
-        # 设置Tesseract OCR路径（根据实际安装情况调整）
-        # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        # 初始化EasyOCR读取器
+        try:
+            # 语言设置为中文和英文
+            self.reader = easyocr.Reader(['ch_sim', 'en'])
+        except Exception as e:
+            raise ImageRecognitionError(f"EasyOCR初始化失败: {str(e)}")
 
         # 设置模板目录
         if template_dir:
@@ -161,8 +165,8 @@ class Detector:
 
         Args:
             image (numpy.ndarray): 包含文字的图像
-            lang (str): 语言，默认为中文简体+英文
-            config (str): Tesseract配置参数
+            lang (str): 语言，默认为中文简体+英文（此参数在EasyOCR中已预设置，仅为保持接口兼容）
+            config (str): 配置参数（此参数在EasyOCR中无效，仅为保持接口兼容）
 
         Returns:
             str: 识别出的文字
@@ -173,17 +177,16 @@ class Detector:
         try:
             # 确保图像是RGB格式
             if len(image.shape) == 3 and image.shape[2] == 3:
-                # 转换为灰度图像
-                gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-                # 应用阈值处理来增强文字
-                _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-                # 识别文字
-                text = pytesseract.image_to_string(thresh, lang=lang, config=config)
+                # EasyOCR直接处理BGR格式图像
+                # 进行文字识别
+                results = self.reader.readtext(image)
+                # 提取识别结果中的文字
+                text = ' '.join([result[1] for result in results])
                 return text.strip()
             else:
                 raise ImageRecognitionError("无效的图像格式，需要BGR格式的图像")
         except ImportError:
-            raise ImageRecognitionError("需要安装pytesseract库: pip install pytesseract")
+            raise ImageRecognitionError("需要安装easyocr库: pip install easyocr")
         except Exception as e:
             raise ImageRecognitionError("文字识别失败") from e
 

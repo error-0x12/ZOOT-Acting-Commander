@@ -7,11 +7,11 @@ if __name__ == "__main__":
 # PRTS代理指挥启动器
 # 用于测试和运行PRTS代理指挥工具
 # """
-# import time
-# import sys
-# from utils import logger
-# from modules import BaseManagementModule, CombatModule, TaskManagementModule
-# from core.exceptions import ElementNotFoundError, OperationFailedError
+import time
+import sys
+from utils import logger
+from modules import BaseManagementModule, CombatModule, TaskManagementModule
+from core.exceptions import ElementNotFoundError, OperationFailedError
 
 
 # def check_dependencies():
@@ -240,63 +240,63 @@ if __name__ == "__main__":
 #     logger.info("测试完成")
 
 # i = 0
-# def test_sanity_and_acting_commander(threshold=0.8):
-#     """
-#     测试理智识别和代理指挥功能
+def test_sanity_and_acting_commander(threshold=0.8):
+    """
+    测试理智识别和代理指挥功能
 
-#     Args:
-#         threshold (float): 模板匹配阈值，默认为0.8
-#     """
-#     logger.info("开始测试理智识别和代理指挥功能...")
-#     logger.info("请在3秒内唤出明日方舟游戏窗口，并确保在作战界面...")
-#     logger.info(f"当前模板匹配阈值: {threshold}")
+    Args:
+        threshold (float): 模板匹配阈值，默认为0.8
+    """
+    logger.info("开始测试理智识别和代理指挥功能...")
+    logger.info("请在3秒内唤出明日方舟游戏窗口，并确保在作战界面...")
+    logger.info(f"当前模板匹配阈值: {threshold}")
 
-#     # 等待3秒
-#     time.sleep(3)
+    # 等待3秒
+    time.sleep(3)
 
-#     try:
-#         # 创建作战模块实例
-#         combat_manager = CombatModule()
+    try:
+        # 创建作战模块实例
+        combat_manager = CombatModule()
 
-#         # 测试识别剩余理智
-#         logger.info("正在尝试识别剩余理智...")
-#         remaining_sanity = combat_manager.recognize_remaining_sanity()
-#         time.sleep(1)
+        # 测试识别剩余理智
+        logger.info("正在尝试识别剩余理智...")
+        remaining_sanity = combat_manager.recognize_remaining_sanity()
+        time.sleep(1)
 
-#         # 测试识别消耗理智
-#         logger.info("正在尝试识别消耗理智...")
-#         consuming_sanity = combat_manager.recognize_consuming_sanity()
-#         time.sleep(1)
+        # 测试识别消耗理智
+        logger.info("正在尝试识别消耗理智...")
+        consuming_sanity = combat_manager.recognize_consuming_sanity()
+        time.sleep(1)
 
-#         # 测试计算可执行次数
-#         logger.info("正在尝试计算可执行次数...")
-#         executable_times = combat_manager.calculate_executable_times()
-#         logger.info(f"可执行次数: {executable_times}")
+        # 测试计算可执行次数
+        logger.info("正在尝试计算可执行次数...")
+        executable_times = combat_manager.calculate_executable_times()
+        logger.info(f"可执行次数: {executable_times}")
         
-#         time.sleep(1)
+        time.sleep(1)
 
-#         # 测试检查并启用代理指挥
-#         logger.info("正在尝试检查并启用代理指挥...")
-#         acting_commander_success = combat_manager.check_and_enable_acting_commander(threshold=threshold)
-#         time.sleep(1)
+        # 测试检查并启用代理指挥
+        logger.info("正在尝试检查并启用代理指挥...")
+        acting_commander_success = combat_manager.check_and_enable_acting_commander(threshold=threshold)
+        time.sleep(1)
 
-#         if acting_commander_success:
-#             logger.info("代理指挥功能测试成功!")
-#         else:
-#             logger.error("代理指挥功能测试失败!")
+        if acting_commander_success:
+            logger.info("代理指挥功能测试成功!")
+        else:
+            logger.error("代理指挥功能测试失败!")
 
-#         logger.info("理智识别和代理指挥功能测试完成!")
-#         return executable_times
-#     except ElementNotFoundError as e:
-#         logger.error(f"测试失败: 未找到元素 - {e}")
-#         logger.warning("可能的原因: 游戏窗口未正确唤出、界面与模板不匹配")
-#     except OperationFailedError as e:
-#         logger.error(f"测试失败: 操作失败 - {e}")
-#         logger.warning("可能的原因: 鼠标点击操作未能正确执行或OCR识别失败")
-#     except Exception as e:
-#         logger.error(f"测试过程中发生未知错误: {str(e)}")
-#         import traceback
-#         traceback.print_exc()
+        logger.info("理智识别和代理指挥功能测试完成!")
+        return executable_times
+    except ElementNotFoundError as e:
+        logger.error(f"测试失败: 未找到元素 - {e}")
+        logger.warning("可能的原因: 游戏窗口未正确唤出、界面与模板不匹配")
+    except OperationFailedError as e:
+        logger.error(f"测试失败: 操作失败 - {e}")
+        logger.warning("可能的原因: 鼠标点击操作未能正确执行或OCR识别失败")
+    except Exception as e:
+        logger.error(f"测试过程中发生未知错误: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
 # def test_eliminate_navigation(threshold=0.6):
 #     """
@@ -453,6 +453,7 @@ if __name__ == "__main__":
 
 
 # if __name__ == "__main__":
+#     test_sanity_and_acting_commander()
 #     # 检查依赖
 #     if not check_dependencies():
 #         sys.exit(1)
