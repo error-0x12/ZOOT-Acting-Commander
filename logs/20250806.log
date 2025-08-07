@@ -564,3 +564,28 @@ Zs Ew
 2025-08-06 02:35:48,903 - PRTS - INFO - 成功点击首页按钮，返回首页
 2025-08-06 02:35:49,913 - PRTS - INFO - 自动化剿灭作战流程已完成
 2025-08-06 02:35:49,926 - PRTS - INFO - 自动剿灭作战完成，共执行 1 轮
+2025-08-06 15:04:18,534 - PRTS - INFO - 开始执行完成基建事项功能...
+2025-08-06 15:04:18,542 - PRTS - INFO - 当前模板匹配阈值: 0.8
+2025-08-06 15:04:23,033 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 15:04:25,452 - PRTS - INFO - 正在导航到基建...
+2025-08-06 15:04:27,724 - PRTS - INFO - 成功导航到基建
+2025-08-06 15:04:37,740 - PRTS - INFO - 正在尝试完成事项...
+2025-08-06 15:04:39,686 - PRTS - INFO - 成功点击通知按钮
+2025-08-06 15:04:42,572 - PRTS - INFO - 成功点击位置 (385, 931)，第 1 次
+2025-08-06 15:04:44,257 - PRTS - INFO - 成功点击位置 (385, 931)，第 2 次
+2025-08-06 15:04:45,939 - PRTS - INFO - 成功点击位置 (385, 931)，第 3 次
+2025-08-06 15:04:47,641 - PRTS - INFO - 成功点击位置 (385, 931)，第 4 次
+2025-08-06 15:04:49,322 - PRTS - INFO - 成功点击位置 (385, 931)，第 5 次
+2025-08-06 15:04:51,006 - PRTS - INFO - 成功点击关闭位置 (114, 831)，退出待办事项
+2025-08-06 15:04:51,024 - PRTS - INFO - 完成事项成功!
+2025-08-06 22:46:42,031 - PRTS - INFO - 开始执行完成基建事项功能...
+2025-08-06 22:46:42,046 - PRTS - INFO - 当前模板匹配阈值: 0.8
+2025-08-06 22:46:54,406 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 22:46:56,644 - PRTS - INFO - 正在导航到基建...
+2025-08-06 22:46:57,019 - PRTS - ERROR - 执行失败: 未找到元素 - 未找到匹配的模板: d:\code\python\PRTS\PRTS Acting Commander\templates\main_menu_base_btn.png, 最大匹配值: 0.2884734570980072
+2025-08-06 22:47:45,577 - PRTS - INFO - 开始执行领取任务奖励功能...
+2025-08-06 22:47:51,033 - easyocr.easyocr - WARNING - Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-06 22:47:53,229 - PRTS - INFO - 正在尝试领取任务奖励...
+2025-08-06 22:47:53,240 - PRTS - INFO - 开始领取任务奖励流程
+2025-08-06 22:47:53,505 - PRTS - ERROR - 领取任务奖励失败: 未找到匹配的模板: main_task_btn.png, 最大匹配值: 0.30179864168167114
+2025-08-06 22:47:53,521 - PRTS - ERROR - 领取任务奖励失败!

@@ -33,7 +33,6 @@ class PRTSGui:
         self.background_image_path = os.path.join(os.path.dirname(__file__), "../templates/background.png")
         
         # 标题图片路径（预留）
-        # 使用正确的路径格式，确保在Windows系统上正常工作
         self.title_image_path = os.path.join(os.path.dirname(__file__), "icon", "title.png")
         
         # 初始化日志窗口
@@ -151,7 +150,7 @@ class PRTSGui:
         
         desc = tk.Label(
             self.content_area, 
-            text="明日方舟辅助工具", 
+            text="让游戏更简单", 
             font=font.Font(family="SimHei", size=12),
             bg="#1a1a1a", 
             fg="#cccccc",
@@ -337,7 +336,7 @@ class PRTSGui:
         self.max_mode_var = tk.BooleanVar(value=False)
         max_mode_check = tk.Checkbutton(
             cycles_frame, 
-            text="最大模式(使用最大可执行次数)", 
+            text="最大模式(直到理智耗尽)", 
             variable=self.max_mode_var, 
             font=font.Font(family="SimHei", size=10),
             bg="#1a1a1a", 
@@ -385,7 +384,7 @@ class PRTSGui:
         )
         threshold_label.pack(side=tk.LEFT, padx=5)
         
-        self.combat_threshold_var = tk.DoubleVar(value=0.6)
+        self.combat_threshold_var = tk.DoubleVar(value=0.8)
         threshold_scale = ttk.Scale(
             threshold_frame, 
             from_=0.1, 

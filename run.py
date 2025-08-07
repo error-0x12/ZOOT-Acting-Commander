@@ -1,17 +1,107 @@
+# import tkinter as tk
+# from tkinter import ttk
+# import time
 from gui.main_gui import main
 
-if __name__ == "__main__":
-    main()
 
+# def show_splash_screen():
+#     """
+#     显示启动进度条
+#     """
+#     # 创建启动窗口
+#     splash_root = tk.Tk()
+#     splash_root.title("PRTS Acting Commander Loading...")
+#     splash_root.geometry("500x300+500+300")
+#     splash_root.resizable(False, False)
+#     splash_root.attributes('-topmost', True)
+#     splash_root.overrideredirect(True)  # 无边框
+#     splash_root.config(bg="#000000")  # 黑色背景
+
+#     # 添加标题
+#     title_label = tk.Label(
+#         splash_root,
+#         text="PRTS Acting Commander",
+#         font=('SimHei', 16, 'bold'),
+#         bg="#000000",  # 黑色背景
+#         fg="#ffffff"
+#     )
+#     title_label.pack(pady=30)
+
+#     # 添加描述
+#     desc_label = tk.Label(
+#         splash_root,
+#         text="明日方舟自动化工具",
+#         font=('SimHei', 10),
+#         bg="#000000",  # 黑色背景
+#         fg="#cccccc"
+#     )
+#     desc_label.pack(pady=10)
+
+#     # 创建进度条框架
+#     progress_frame = tk.Frame(splash_root, bg="#000000")  # 黑色背景
+#     progress_frame.pack(pady=20, padx=50, fill=tk.X)
+
+#     # 添加进度条
+#     progress_var = tk.DoubleVar()
+#     progress_bar = ttk.Progressbar(
+#         progress_frame,
+#         variable=progress_var,
+#         length=100,
+#         mode='determinate'
+#     )
+#     progress_bar.pack(fill=tk.X)
+
+#     # 添加进度文本
+#     progress_text = tk.Label(
+#         splash_root,
+#         text="  ",
+#         font=('SimHei', 10),
+#         bg="#000000",  # 黑色背景
+#         fg="#cccccc"
+#     )
+#     progress_text.pack(pady=10)
+
+#     # 模拟加载过程
+#     def update_progress():
+#         for i in range(101):
+#             # 更新进度条
+#             progress_var.set(i)
+#             # 更新进度文本
+#             if i < 20:
+#                 progress_text.config(text="加载配置...")
+#             elif i < 40:
+#                 progress_text.config(text="初始化中...")
+#             elif i < 60:
+#                 progress_text.config(text="加载资源...")
+#             elif i < 80:
+#                 progress_text.config(text="检查依赖...")
+#             else:
+#                 progress_text.config(text="加载 GUI...")
+#             # 更新窗口
+#             splash_root.update_idletasks()
+#             # 模拟加载延迟
+#             time.sleep(0.01)
+#         # 关闭启动窗口并启动主程序
+#         splash_root.destroy()
+        
+
+#     # 启动进度更新
+#     splash_root.after(10, update_progress)
+#     splash_root.mainloop()
+
+
+if __name__ == "__main__":
+    # show_splash_screen()
+    main()
 # """
 # PRTS代理指挥启动器
 # 用于测试和运行PRTS代理指挥工具
 # """
-import time
-import sys
-from utils import logger
-from modules import BaseManagementModule, CombatModule, TaskManagementModule
-from core.exceptions import ElementNotFoundError, OperationFailedError
+# import time
+# import sys
+# from utils import logger
+# from modules import BaseManagementModule, CombatModule, TaskManagementModule
+# from core.exceptions import ElementNotFoundError, OperationFailedError
 
 
 # def check_dependencies():
@@ -240,63 +330,63 @@ from core.exceptions import ElementNotFoundError, OperationFailedError
 #     logger.info("测试完成")
 
 # i = 0
-def test_sanity_and_acting_commander(threshold=0.8):
-    """
-    测试理智识别和代理指挥功能
+# def test_sanity_and_acting_commander(threshold=0.8):
+#     """
+#     测试理智识别和代理指挥功能
 
-    Args:
-        threshold (float): 模板匹配阈值，默认为0.8
-    """
-    logger.info("开始测试理智识别和代理指挥功能...")
-    logger.info("请在3秒内唤出明日方舟游戏窗口，并确保在作战界面...")
-    logger.info(f"当前模板匹配阈值: {threshold}")
+#     Args:
+#         threshold (float): 模板匹配阈值，默认为0.8
+#     """
+#     logger.info("开始测试理智识别和代理指挥功能...")
+#     logger.info("请在3秒内唤出明日方舟游戏窗口，并确保在作战界面...")
+#     logger.info(f"当前模板匹配阈值: {threshold}")
 
-    # 等待3秒
-    time.sleep(3)
+#     # 等待3秒
+#     time.sleep(3)
 
-    try:
-        # 创建作战模块实例
-        combat_manager = CombatModule()
+#     try:
+#         # 创建作战模块实例
+#         combat_manager = CombatModule()
 
-        # 测试识别剩余理智
-        logger.info("正在尝试识别剩余理智...")
-        remaining_sanity = combat_manager.recognize_remaining_sanity()
-        time.sleep(1)
+#         # 测试识别剩余理智
+#         logger.info("正在尝试识别剩余理智...")
+#         remaining_sanity = combat_manager.recognize_remaining_sanity()
+#         time.sleep(1)
 
-        # 测试识别消耗理智
-        logger.info("正在尝试识别消耗理智...")
-        consuming_sanity = combat_manager.recognize_consuming_sanity()
-        time.sleep(1)
+#         # 测试识别消耗理智
+#         logger.info("正在尝试识别消耗理智...")
+#         consuming_sanity = combat_manager.recognize_consuming_sanity()
+#         time.sleep(1)
 
-        # 测试计算可执行次数
-        logger.info("正在尝试计算可执行次数...")
-        executable_times = combat_manager.calculate_executable_times()
-        logger.info(f"可执行次数: {executable_times}")
+#         # 测试计算可执行次数
+#         logger.info("正在尝试计算可执行次数...")
+#         executable_times = combat_manager.calculate_executable_times()
+#         logger.info(f"可执行次数: {executable_times}")
         
-        time.sleep(1)
+#         time.sleep(1)
 
-        # 测试检查并启用代理指挥
-        logger.info("正在尝试检查并启用代理指挥...")
-        acting_commander_success = combat_manager.check_and_enable_acting_commander(threshold=threshold)
-        time.sleep(1)
+#         # 测试检查并启用代理指挥
+#         logger.info("正在尝试检查并启用代理指挥...")
+#         acting_commander_success = combat_manager.check_and_enable_acting_commander(threshold=threshold)
+#         time.sleep(1)
 
-        if acting_commander_success:
-            logger.info("代理指挥功能测试成功!")
-        else:
-            logger.error("代理指挥功能测试失败!")
+#         if acting_commander_success:
+#             logger.info("代理指挥功能测试成功!")
+#         else:
+#             logger.error("代理指挥功能测试失败!")
 
-        logger.info("理智识别和代理指挥功能测试完成!")
-        return executable_times
-    except ElementNotFoundError as e:
-        logger.error(f"测试失败: 未找到元素 - {e}")
-        logger.warning("可能的原因: 游戏窗口未正确唤出、界面与模板不匹配")
-    except OperationFailedError as e:
-        logger.error(f"测试失败: 操作失败 - {e}")
-        logger.warning("可能的原因: 鼠标点击操作未能正确执行或OCR识别失败")
-    except Exception as e:
-        logger.error(f"测试过程中发生未知错误: {str(e)}")
-        import traceback
-        traceback.print_exc()
+#         logger.info("理智识别和代理指挥功能测试完成!")
+#         return executable_times
+#     except ElementNotFoundError as e:
+#         logger.error(f"测试失败: 未找到元素 - {e}")
+#         logger.warning("可能的原因: 游戏窗口未正确唤出、界面与模板不匹配")
+#     except OperationFailedError as e:
+#         logger.error(f"测试失败: 操作失败 - {e}")
+#         logger.warning("可能的原因: 鼠标点击操作未能正确执行或OCR识别失败")
+#     except Exception as e:
+#         logger.error(f"测试过程中发生未知错误: {str(e)}")
+#         import traceback
+#         traceback.print_exc()
 
 # def test_eliminate_navigation(threshold=0.6):
 #     """
