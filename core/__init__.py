@@ -1,11 +1,11 @@
 """
-PRTS代理指挥核心模块
+ZOOT代理指挥核心模块
 提供游戏控制和图像识别的基础功能
 """
 
 # 导出异常类
 from .exceptions import (
-    PRTSException,
+    ZOOTException,
     ImageRecognitionError,
     ElementNotFoundError,
     OperationFailedError,
@@ -20,7 +20,7 @@ from .detector import Detector
 # 定义公共API
 __all__ = [
     # 异常类
-    'PRTSException',
+    'ZOOTException',
     'ImageRecognitionError',
     'ElementNotFoundError',
     'OperationFailedError',

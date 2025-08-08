@@ -4,19 +4,19 @@
 """
 
 
-class PRTSException(Exception):
-    """PRTS代理指挥的基础异常类"""
+class ZOOTException(Exception):
+    """ZOOT代理指挥的基础异常类"""
     pass
 
 
-class ImageRecognitionError(PRTSException):
+class ImageRecognitionError(ZOOTException):
     """图像识别错误"""
     def __init__(self, message="图像识别失败"):
         self.message = message
         super().__init__(self.message)
 
 
-class ElementNotFoundError(PRTSException):
+class ElementNotFoundError(ZOOTException):
     """未找到目标元素"""
     def __init__(self, element_name, message=None):
         self.element_name = element_name
@@ -24,7 +24,7 @@ class ElementNotFoundError(PRTSException):
         super().__init__(self.message)
 
 
-class OperationFailedError(PRTSException):
+class OperationFailedError(ZOOTException):
     """操作失败"""
     def __init__(self, operation_name, message=None):
         self.operation_name = operation_name
@@ -32,14 +32,14 @@ class OperationFailedError(PRTSException):
         super().__init__(self.message)
 
 
-class GameNotRunningError(PRTSException):
+class GameNotRunningError(ZOOTException):
     """游戏未运行"""
     def __init__(self, message="明日方舟游戏未运行"):
         self.message = message
         super().__init__(self.message)
 
 
-class ConfigurationError(PRTSException):
+class ConfigurationError(ZOOTException):
     """配置错误"""
     def __init__(self, config_name, message=None):
         self.config_name = config_name

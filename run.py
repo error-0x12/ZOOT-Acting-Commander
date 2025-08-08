@@ -10,7 +10,7 @@ from gui.main_gui import main
 #     """
 #     # 创建启动窗口
 #     splash_root = tk.Tk()
-#     splash_root.title("PRTS Acting Commander 启动中")
+#     splash_root.title("ZOOT Acting Commander 启动中")
 #     splash_root.overrideredirect(True)
 #     splash_root.geometry("500x300+500+300")
 #     splash_root.resizable(False, False)
@@ -19,7 +19,7 @@ from gui.main_gui import main
 #     # 添加标题
 #     title_label = tk.Label(
 #         splash_root,
-#         text="PRTS Acting Commander",
+#         text="ZOOT Acting Commander",
 #         font=('SimHei', 16, 'bold'),
 #         bg="#1a1a1a",
 #         fg="#ffffff"
@@ -93,8 +93,8 @@ if __name__ == "__main__":
     # show_splash_screen()
     main()
 # """
-# PRTS代理指挥启动器
-# 用于测试和运行PRTS代理指挥工具
+# ZOOT代理指挥启动器
+# 用于测试和运行ZOOT代理指挥工具
 # """
 # import time
 # import sys

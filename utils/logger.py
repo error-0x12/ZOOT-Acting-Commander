@@ -24,7 +24,7 @@ def setup_logger(log_level="INFO"):
         ]
     )
     
-    return logging.getLogger("PRTS")
+    return logging.getLogger("ZOOT")
 
 # 创建默认日志器
 logger = setup_logger()

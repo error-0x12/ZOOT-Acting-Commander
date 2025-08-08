@@ -15,11 +15,11 @@ from modules import BaseManagementModule, CombatModule, TaskManagementModule
 from core.exceptions import ElementNotFoundError, OperationFailedError
 from config.settings import settings
 
-class PRTSGui:
+class ZOOTGui:
     def __init__(self, root):
         # 设置主窗口
         self.root = root
-        self.root.title("PRTS Acting Commander")
+        self.root.title("ZOOT Acting Commander")
         self.root.geometry("1365x768+100+100")
         self.root.overrideredirect(True)  # 无边框
         self.root.resizable(False, False)
@@ -58,7 +58,7 @@ class PRTSGui:
         # 创建标题栏标题（文字显示）
         self.title_label = tk.Label(
             self.title_bar, 
-            text="PRTS Acting Commander", 
+            text="ZOOT Acting Commander", 
             font=font.Font(family="SimHei", size=10, weight="bold"),
             bg="#2d2d2d", 
             fg="#ffffff"
@@ -84,7 +84,7 @@ class PRTSGui:
             # 如果加载失败，使用文字替代
             self.title_label = tk.Label(
                 self.sidebar, 
-                text="PRTS Acting Commander", 
+                text="ZOOT Acting Commander", 
                 font=font.Font(family="SimHei", size=12, weight="bold"),
                 bg="#2d2d2d", 
                 fg="#ffffff",
@@ -149,7 +149,7 @@ class PRTSGui:
         self.clear_content_area()
         title = tk.Label(
             self.content_area, 
-            text="Welcome to PRTS Acting Commander\n\n欢迎使用 PRTS 代理指挥系统", 
+            text="Welcome to ZOOT Acting Commander\n\n欢迎使用 ZOOT 代理指挥系统", 
             font=font.Font(family="SimHei", size=20, weight="bold"),
             bg="#1a1a1a", 
             fg="#ffffff"
@@ -743,7 +743,7 @@ class PRTSGui:
         """
         # 创建日志窗口
         self.log_window = tk.Toplevel(self.root)
-        self.log_window.title("PRTS 日志")
+        self.log_window.title("ZOOT 日志")
         
         # 隐藏窗口边框
         self.log_window.overrideredirect(True)
@@ -805,7 +805,7 @@ class PRTSGui:
         )
         title.pack(pady=20)
         
-        about_text = "PRTS Acting Commander\n\n版本: 0.0.0\n\n基于Python开发的明日方舟自动化工具\nalpha阶段\n\n开发者: @bilibili_没事干的雀斑猪\n\n联系: 3919086204@qq.com"
+        about_text = "ZOOT Acting Commander\n\n版本: 0.0.0\n\n基于Python开发的明日方舟自动化工具\nalpha阶段\n\n开发者: @bilibili_没事干的雀斑猪\n\n联系: 3919086204@qq.com"
         about_label = tk.Label(
             self.content_area, 
             text=about_text, 
@@ -1214,7 +1214,7 @@ class PRTSGui:
 def main():
     import tkinter as tk
     root = tk.Tk()
-    app = PRTSGui(root)
+    app = ZOOTGui(root)
     root.mainloop()
 
 if __name__ == "__main__":

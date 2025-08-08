@@ -1,6 +1,6 @@
-# PRTS Acting Commander
+# ZOOT Acting Commander
 
-PRTS Acting Commander 是一个为明日方舟设计的自动化工具，灵感来源于开源项目 Better Genshin Impact。该工具基于 Python 开发，旨在为玩家提供便捷的游戏辅助功能，减轻重复操作的负担。
+ZOOT Acting Commander 是一个为明日方舟设计的自动化工具，灵感来源于开源项目 Better Genshin Impact。该工具基于 Python 开发，旨在为玩家提供便捷的游戏辅助功能，减轻重复操作的负担。
 
 ## 功能特点
 
@@ -16,7 +16,7 @@ PRTS Acting Commander 是一个为明日方舟设计的自动化工具，灵感�
 ## 项目结构
 
 ```
-PRTS Acting Commander/
+ZOOT Acting Commander/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -104,7 +104,7 @@ PRTS Acting Commander/
 ## 联系我们
 
 如果您有任何问题或建议，请通过以下方式联系我们：
-- GitHub Issues: [提交问题](https://github.com/error-0x12/PRTS-Acting-Commander/issues)
+- GitHub Issues: [提交问题](https://github.com/error-0x12/ZOOT-Acting-Commander/issues)
 - 邮箱: 3919086204@qq.com
 
-© 2025 PRTS Acting Commander 开发者
+© 2025 ZOOT Acting Commander 开发者
