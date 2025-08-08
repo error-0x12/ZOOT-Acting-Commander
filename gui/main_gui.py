@@ -805,7 +805,8 @@ class ZOOTGui:
         )
         title.pack(pady=20)
         
-        about_text = "ZOOT Acting Commander\n\n版本: 0.0.0\n\n基于Python开发的明日方舟自动化工具\nalpha阶段\n\n开发者: @bilibili_没事干的雀斑猪\n\n联系: 3919086204@qq.com"
+        about_text = "ZOOT Acting Commander\n\n版本: 0.1.0\n\n基于Python开发的明日方舟自动化工具\nbeta阶段\n\n开发者: @bilibili_没事干的雀斑猪\n\n联系: 3919086204@qq.com"
+
         about_label = tk.Label(
             self.content_area, 
             text=about_text, 

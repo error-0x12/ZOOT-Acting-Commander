@@ -1,7 +1,7 @@
 # ZOOT Acting Commander
 
 ZOOT Acting Commander 是一个为明日方舟设计的自动化工具，灵感来源于开源项目 Better Genshin Impact。该工具基于 Python 开发，旨在为玩家提供便捷的游戏辅助功能，减轻重复操作的负担。
-v0.0.1
+v0.1.0
 beta阶段，功能尚不完善，欢迎反馈和建议。
 
 
