@@ -134,6 +134,9 @@ class PRTSGui:
         self.close_button.pack(side=tk.RIGHT, padx=10)
         self.close_button.bind("<Button-1>", lambda e: self.on_closing())
         
+        # 记录当前截图存储设置状态
+        logger.info(f"程序启动，当前截图存储设置: {'启用' if settings.SAVE_SCREENSHOTS else '禁用'}")
+        
         # 显示主页
         self.show_home()
         
@@ -422,15 +425,146 @@ class PRTSGui:
         )
         title.pack(pady=20)
         
-        # 预留招募管理相关控件位置
-        placeholder = tk.Label(
-            self.content_area, 
-            text="招募管理功能开发中...", 
-            font=font.Font(family="SimHei", size=12),
+        # 招募标签选择区域
+        tag_frame = tk.Frame(self.content_area, bg="#1a1a1a")
+        tag_frame.pack(pady=10, fill=tk.X, padx=20)
+        
+        tag_title = tk.Label(
+            tag_frame, 
+            text="选择公开招募标签 (可多选)", 
+            font=font.Font(family="SimHei", size=12, weight="bold"),
+            bg="#1a1a1a", 
+            fg="#ffffff"
+        )
+        tag_title.pack(pady=10, anchor="w")
+        
+        # 标签列表
+        tags = [
+            "近卫干员", "近战位", "控场", "狙击干员", "重装干员", 
+            "远程位", "爆发", "治疗", "医疗干员", "支援", 
+            "辅助干员", "术师干员", "特种干员", "先锋干员", 
+            "费用回复", "输出", "生存", "群攻", "防护", 
+            "减速", "削弱", "快速复活", "位移", "召唤", 
+            "支援机械", "元素", "新手"
+        ]
+        
+        # 创建标签复选框
+        self.tag_vars = {}
+        tag_columns = 4
+        tag_index = 0
+        
+        tag_check_frame = tk.Frame(tag_frame, bg="#1a1a1a")
+        tag_check_frame.pack(fill=tk.X)
+        
+        for tag in tags:
+            row = tag_index // tag_columns
+            col = tag_index % tag_columns
+            
+            var = tk.BooleanVar(value=False)
+            self.tag_vars[tag] = var
+            
+            check_btn = tk.Checkbutton(
+                tag_check_frame, 
+                text=tag, 
+                variable=var, 
+                font=font.Font(family="SimHei", size=10),
+                bg="#1a1a1a", 
+                fg="#cccccc",
+                selectcolor="#3d3d3d",
+                bd=0
+            )
+            check_btn.grid(row=row, column=col, sticky="w", padx=5, pady=5)
+            
+            tag_index += 1
+        
+        # 招募位选择
+        slot_frame = tk.Frame(self.content_area, bg="#1a1a1a")
+        slot_frame.pack(pady=10, fill=tk.X, padx=20)
+        
+        slot_label = tk.Label(
+            slot_frame, 
+            text="选择招募位", 
+            font=font.Font(family="SimHei", size=12, weight="bold"),
+            bg="#1a1a1a", 
+            fg="#ffffff"
+        )
+        slot_label.pack(side=tk.LEFT, padx=5)
+        
+        self.slot_var = tk.StringVar(value="所有")
+        slot_option = ttk.Combobox(
+            slot_frame, 
+            textvariable=self.slot_var, 
+            font=font.Font(family="SimHei", size=10),
+            state="readonly",
+            width=10
+        )
+        slot_option['values'] = ("所有", "1", "2", "3", "4")
+        slot_option.pack(side=tk.LEFT, padx=5)
+        
+        # 阈值调整
+        threshold_frame = tk.Frame(self.content_area, bg="#1a1a1a")
+        threshold_frame.pack(pady=10, fill=tk.X, padx=20)
+        
+        threshold_label = tk.Label(
+            threshold_frame, 
+            text="模板匹配阈值: ", 
+            font=font.Font(family="SimHei", size=10),
             bg="#1a1a1a", 
             fg="#cccccc"
         )
-        placeholder.pack()
+        threshold_label.pack(side=tk.LEFT, padx=5)
+        
+        self.recruit_threshold_var = tk.DoubleVar(value=0.8)
+        threshold_scale = ttk.Scale(
+            threshold_frame, 
+            from_=0.1, 
+            to=1.0, 
+            orient="horizontal", 
+            variable=self.recruit_threshold_var, 
+            length=200
+        )
+        threshold_scale.pack(side=tk.LEFT)
+        
+        self.recruit_threshold_value_label = tk.Label(
+            threshold_frame, 
+            text=f"{self.recruit_threshold_var.get():.1f}", 
+            font=font.Font(family="SimHei", size=10),
+            bg="#1a1a1a", 
+            fg="#cccccc"
+        )
+        self.recruit_threshold_value_label.pack(side=tk.LEFT, padx=5)
+        
+        # 更新阈值显示
+        def update_recruit_threshold_label(event):
+            self.recruit_threshold_value_label.config(text=f"{self.recruit_threshold_var.get():.1f}")
+        
+        threshold_scale.bind("<Motion>", update_recruit_threshold_label)
+        threshold_scale.bind("<ButtonRelease-1>", update_recruit_threshold_label)
+        
+        # 开始招募按钮
+        start_recruit_btn = tk.Button(
+            self.content_area, 
+            text="开始公开招募", 
+            font=font.Font(family="SimHei", size=12),
+            bg="#3d3d3d", 
+            fg="#ffffff",
+            bd=0,
+            padx=15,
+            pady=8,
+            command=self.start_public_recruit
+        )
+        start_recruit_btn.pack(pady=20)
+        
+        # 添加说明文本
+        desc = tk.Label(
+            self.content_area, 
+            text="点击后将自动进行公开招募\n请确保已在主菜单界面，且游戏窗口可见", 
+            font=font.Font(family="SimHei", size=10),
+            bg="#1a1a1a", 
+            fg="#cccccc",
+            justify=tk.CENTER
+        )
+        desc.pack(pady=10)
         
     def show_settings(self):
         self.clear_content_area()
@@ -455,6 +589,37 @@ class PRTSGui:
             fg="#ffffff"
         )
         log_settings_title.pack(pady=10)
+
+        # 截图存储设置
+        screenshot_frame = tk.Frame(self.content_area, bg="#1a1a1a")
+        screenshot_frame.pack(pady=20, fill=tk.X)
+
+        screenshot_title = tk.Label(
+            screenshot_frame, 
+            text="截图存储设置", 
+            font=font.Font(family="SimHei", size=14, weight="bold"),
+            bg="#1a1a1a", 
+            fg="#ffffff"
+        )
+        screenshot_title.pack(pady=10)
+
+        # 启用截图存储复选框
+        self.save_screenshots_var = tk.BooleanVar(value=settings.SAVE_SCREENSHOTS)
+        screenshot_check = tk.Checkbutton(
+            screenshot_frame, 
+            text="启用截图存储 (用于调试)", 
+            variable=self.save_screenshots_var, 
+            font=font.Font(family="SimHei", size=10),
+            bg="#1a1a1a", 
+            fg="#cccccc",
+            selectcolor="#3d3d3d",
+            bd=0,
+            command=self.on_screenshot_toggle
+        )
+        screenshot_check.pack(pady=10, anchor="w")
+
+        # 日志窗口设置区域
+
         
         # 启用日志窗口复选框
         self.log_window_enabled_var = tk.BooleanVar(value=settings.LOG_WINDOW_ENABLED)
@@ -852,6 +1017,79 @@ class PRTSGui:
             # 显示窗口
             self.root.deiconify()
         
+    def start_public_recruit(self):
+        """
+        公开招募功能
+        """
+        try:
+            # 导入招募模块
+            from modules import RecruitModule
+            
+            # 获取选中的标签
+            selected_tags = [tag for tag, var in self.tag_vars.items() if var.get()]
+            
+            # 获取选择的招募位
+            slot_option = self.slot_var.get()
+            slot_number = None if slot_option == "所有" else int(slot_option)
+            
+            # 获取模板匹配阈值
+            threshold = self.recruit_threshold_var.get()
+            
+            logger.info(f"开始执行公开招募功能...")
+            logger.info(f"选中的标签: {selected_tags}")
+            logger.info(f"选择的招募位: {slot_option}")
+            logger.info(f"模板匹配阈值: {threshold}")
+            
+            # 如果没有选择标签，使用默认标签
+            if not selected_tags:
+                selected_tags = ["重装干员", "新手", "医疗干员"]
+                logger.info(f"未选择标签，使用默认标签: {selected_tags}")
+            
+            # 显示提示信息
+            messagebox.showinfo("提示", "请确保已在主菜单界面\n3秒后开始执行...")
+            
+            # 等待3秒
+            time.sleep(3)
+            
+            # 隐藏窗口
+            self.root.withdraw()
+            
+            # 创建招募模块实例
+            recruit_manager = RecruitModule()
+            
+            # 导航到招募页面
+            logger.info("正在导航到招募页面...")
+            if not recruit_manager.navigate_to_recruit(threshold=threshold):
+                logger.error("无法导航到招募页面")
+                messagebox.showerror("失败", "无法导航到招募页面")
+                return
+            time.sleep(2)
+            
+            # 执行招募操作
+            logger.info(f"正在执行招募操作，目标标签: {selected_tags}")
+            success = recruit_manager.enter_recruit_slots(slot_number=slot_number, target_tags=selected_tags, threshold=threshold)
+            
+            if success:
+                logger.info("公开招募操作完成!")
+                messagebox.showinfo("成功", "公开招募操作已完成!")
+            else:
+                logger.error("公开招募操作失败!")
+                messagebox.showerror("失败", "无法完成公开招募操作，请检查游戏界面是否正确。")
+        except ElementNotFoundError as e:
+            logger.error(f"执行失败: 未找到元素 - {e}")
+            messagebox.showerror("失败", f"未找到元素: {e}\n可能的原因: 游戏窗口未正确唤出、界面与模板不匹配")
+        except OperationFailedError as e:
+            logger.error(f"执行失败: 操作失败 - {e}")
+            messagebox.showerror("失败", f"操作失败: {e}\n可能的原因: 鼠标点击操作未能正确执行")
+        except Exception as e:
+            logger.error(f"执行过程中发生未知错误: {str(e)}")
+            messagebox.showerror("错误", f"发生未知错误: {str(e)}")
+            import traceback
+            traceback.print_exc()
+        finally:
+            # 显示窗口
+            self.root.deiconify()
+
     def claim_task_rewards(self):
         """
         领取任务奖励功能
@@ -905,6 +1143,15 @@ class PRTSGui:
         else:
             self.log_window.withdraw()
 
+    def on_screenshot_toggle(self):
+        """
+        处理截图存储复选框的切换事件
+        """
+        save_state = self.save_screenshots_var.get()
+        logger.info(f"截图存储状态已切换为: {'启用' if save_state else '禁用'}")
+        # 立即保存设置
+        self.save_settings()
+
     def update_log_window_opacity(self, value):
         """
         更新日志窗口的透明度
@@ -940,6 +1187,7 @@ class PRTSGui:
             settings.LOG_WINDOW_ENABLED = self.log_window_enabled_var.get()
             settings.LOG_WINDOW_OPACITY = self.opacity_var.get()
             settings.LOG_WINDOW_WIDTH = self.width_var.get()
+            settings.SAVE_SCREENSHOTS = self.save_screenshots_var.get()
             
             # 保存到文件
             config_file_path = os.path.join(project_root, 'config', 'settings.py')
@@ -950,7 +1198,10 @@ class PRTSGui:
                 f.write(f'    LOG_WINDOW_ENABLED = {settings.LOG_WINDOW_ENABLED}\n')
                 f.write(f'    LOG_WINDOW_OPACITY = {settings.LOG_WINDOW_OPACITY:.1f}\n')
                 f.write(f'    LOG_WINDOW_WIDTH = {settings.LOG_WINDOW_WIDTH}     # 日志窗口宽度\n')
-                f.write('    LOG_WINDOW_HEIGHT = 300    # 日志窗口高度\n\n')
+                f.write('    LOG_WINDOW_HEIGHT = 300    # 日志窗口高度\n')
+                f.write('    \n')
+                f.write('    # 截图存储设置\n')
+                f.write(f'    SAVE_SCREENSHOTS = {settings.SAVE_SCREENSHOTS}    # 是否保存截图用于调试\n\n')
                 f.write('# 创建设置实例\n')
                 f.write('settings = Settings()\n')
             

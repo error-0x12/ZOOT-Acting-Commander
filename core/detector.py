@@ -7,7 +7,6 @@ import numpy as np
 import easyocr
 from PIL import Image
 import os
-import logging
 from .exceptions import ImageRecognitionError, ElementNotFoundError
 from utils.logger import logger
 
@@ -159,7 +158,57 @@ class Detector:
         except Exception as e:
             raise ImageRecognitionError(f"模板匹配失败: {template_name}") from e
 
-    def recognize_text(self, image, lang='chi_sim+eng', config='--psm 6'):
+    def save_image(self, image, filename=None, directory=None):
+        """
+        保存图像到指定目录
+
+        Args:
+            image (numpy.ndarray): 要保存的图像
+            filename (str): 图像文件名，如果为None则使用时间戳
+            directory (str): 保存目录，如果为None则保存到项目根目录下的logs文件夹
+
+        Returns:
+            str: 保存的文件路径
+
+        Raises:
+            ImageRecognitionError: 图像保存失败时抛出
+        """
+        try:
+            import time
+            import os
+
+            # 设置保存目录
+            if directory:
+                save_dir = directory
+            else:
+                project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                save_dir = os.path.join(project_root, 'logs')
+
+            # 确保保存目录存在
+            if not os.path.exists(save_dir):
+                os.makedirs(save_dir)
+
+            # 设置文件名
+            if filename:
+                # 确保文件名包含扩展名
+                if not (filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith('.jpeg')):
+                    filename += '.png'
+            else:
+                # 使用时间戳作为文件名
+                timestamp = time.strftime('%Y%m%d%H%M%S')
+                filename = f'debug_{timestamp}.png'
+
+            # 构建保存路径
+            save_path = os.path.join(save_dir, filename)
+
+            # 保存图像
+            cv2.imwrite(save_path, image)
+            logger.info(f"图像已保存到: {save_path}")
+            return save_path
+        except Exception as e:
+            raise ImageRecognitionError(f"图像保存失败: {str(e)}") from e
+
+    def recognize_text(self, image, lang='chi_sim+eng', config='--psm 6', return_coordinates=False):
         """
         识别图像中的文字
 
@@ -167,9 +216,12 @@ class Detector:
             image (numpy.ndarray): 包含文字的图像
             lang (str): 语言，默认为中文简体+英文（此参数在EasyOCR中已预设置，仅为保持接口兼容）
             config (str): 配置参数（此参数在EasyOCR中无效，仅为保持接口兼容）
+            return_coordinates (bool): 是否返回文字坐标信息
 
         Returns:
-            str: 识别出的文字
+            str or list: 若return_coordinates为False，返回识别出的文字字符串；
+                        若return_coordinates为True，返回包含文字和坐标的列表，每个元素为(dict):
+                        {'text': 识别的文字, 'bbox': 文字框坐标, 'prob': 置信度}
 
         Raises:
             ImageRecognitionError: 文字识别失败时抛出
@@ -180,9 +232,29 @@ class Detector:
                 # EasyOCR直接处理BGR格式图像
                 # 进行文字识别
                 results = self.reader.readtext(image)
-                # 提取识别结果中的文字
-                text = ' '.join([result[1] for result in results])
-                return text.strip()
+                
+                if return_coordinates:
+                    # 返回包含文字和坐标的列表
+                    text_with_coords = []
+                    for result in results:
+                        bbox, text, prob = result
+                        # 计算文字框的中心坐标
+                        x1, y1 = bbox[0]
+                        x2, y2 = bbox[2]
+                        center_x = int((x1 + x2) / 2)
+                        center_y = int((y1 + y2) / 2)
+                        
+                        text_with_coords.append({
+                            'text': text,
+                            'bbox': bbox,
+                            'center': (center_x, center_y),
+                            'confidence': prob
+                        })
+                    return text_with_coords
+                else:
+                    # 仅返回文字内容
+                    text = ' '.join([result[1] for result in results])
+                    return text.strip()
             else:
                 raise ImageRecognitionError("无效的图像格式，需要BGR格式的图像")
         except ImportError:

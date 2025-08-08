@@ -1,98 +1,97 @@
-# import tkinter as tk
-# from tkinter import ttk
-# import time
+import tkinter as tk
+from tkinter import ttk
+import time
 from gui.main_gui import main
 
 
-# def show_splash_screen():
-#     """
-#     显示启动进度条
-#     """
-#     # 创建启动窗口
-#     splash_root = tk.Tk()
-#     splash_root.title("PRTS Acting Commander Loading...")
-#     splash_root.geometry("500x300+500+300")
-#     splash_root.resizable(False, False)
-#     splash_root.attributes('-topmost', True)
-#     splash_root.overrideredirect(True)  # 无边框
-#     splash_root.config(bg="#000000")  # 黑色背景
+def show_splash_screen():
+    """
+    显示启动进度条
+    """
+    # 创建启动窗口
+    splash_root = tk.Tk()
+    splash_root.title("PRTS Acting Commander 启动中")
+    splash_root.overrideredirect(True)
+    splash_root.geometry("500x300+500+300")
+    splash_root.resizable(False, False)
+    splash_root.attributes('-topmost', True)
+    splash_root.config(bg="#1a1a1a")
+    # 添加标题
+    title_label = tk.Label(
+        splash_root,
+        text="PRTS Acting Commander",
+        font=('SimHei', 16, 'bold'),
+        bg="#1a1a1a",
+        fg="#ffffff"
+    )
+    title_label.pack(pady=30)
 
-#     # 添加标题
-#     title_label = tk.Label(
-#         splash_root,
-#         text="PRTS Acting Commander",
-#         font=('SimHei', 16, 'bold'),
-#         bg="#000000",  # 黑色背景
-#         fg="#ffffff"
-#     )
-#     title_label.pack(pady=30)
+    # 添加描述
+    desc_label = tk.Label(
+        splash_root,
+        text="明日方舟自动化工具",
+        font=('SimHei', 10),
+        bg="#1a1a1a",
+        fg="#cccccc"
+    )
+    desc_label.pack(pady=10)
 
-#     # 添加描述
-#     desc_label = tk.Label(
-#         splash_root,
-#         text="明日方舟自动化工具",
-#         font=('SimHei', 10),
-#         bg="#000000",  # 黑色背景
-#         fg="#cccccc"
-#     )
-#     desc_label.pack(pady=10)
+    # 创建进度条框架
+    progress_frame = tk.Frame(splash_root, bg="#1a1a1a")
+    progress_frame.pack(pady=20, padx=50, fill=tk.X)
 
-#     # 创建进度条框架
-#     progress_frame = tk.Frame(splash_root, bg="#000000")  # 黑色背景
-#     progress_frame.pack(pady=20, padx=50, fill=tk.X)
+    # 添加进度条
+    progress_var = tk.DoubleVar()
+    progress_bar = ttk.Progressbar(
+        progress_frame,
+        variable=progress_var,
+        length=100,
+        mode='determinate'
+    )
+    progress_bar.pack(fill=tk.X)
 
-#     # 添加进度条
-#     progress_var = tk.DoubleVar()
-#     progress_bar = ttk.Progressbar(
-#         progress_frame,
-#         variable=progress_var,
-#         length=100,
-#         mode='determinate'
-#     )
-#     progress_bar.pack(fill=tk.X)
+    # 添加进度文本
+    progress_text = tk.Label(
+        splash_root,
+        text="准备中...",
+        font=('SimHei', 10),
+        bg="#1a1a1a",
+        fg="#cccccc"
+    )
+    progress_text.pack(pady=10)
 
-#     # 添加进度文本
-#     progress_text = tk.Label(
-#         splash_root,
-#         text="  ",
-#         font=('SimHei', 10),
-#         bg="#000000",  # 黑色背景
-#         fg="#cccccc"
-#     )
-#     progress_text.pack(pady=10)
+    # 模拟加载过程
+    def update_progress():
+        for i in range(101):
+            # 更新进度条
+            progress_var.set(i)
+            # 更新进度文本
+            if i < 20:
+                progress_text.config(text="加载配置...")
+            elif i < 40:
+                progress_text.config(text="加载模块...")
+            elif i < 60:
+                progress_text.config(text="加载资源...")
+            elif i < 80:
+                progress_text.config(text="检查依赖...")
+            else:
+                progress_text.config(text="准备就绪...")
+            # 更新窗口
+            splash_root.update_idletasks()
+            # 模拟加载延迟
+            time.sleep(0.005)
+        # 关闭启动窗口并启动主程序
+        splash_root.destroy()
+        main()
 
-#     # 模拟加载过程
-#     def update_progress():
-#         for i in range(101):
-#             # 更新进度条
-#             progress_var.set(i)
-#             # 更新进度文本
-#             if i < 20:
-#                 progress_text.config(text="加载配置...")
-#             elif i < 40:
-#                 progress_text.config(text="初始化中...")
-#             elif i < 60:
-#                 progress_text.config(text="加载资源...")
-#             elif i < 80:
-#                 progress_text.config(text="检查依赖...")
-#             else:
-#                 progress_text.config(text="加载 GUI...")
-#             # 更新窗口
-#             splash_root.update_idletasks()
-#             # 模拟加载延迟
-#             time.sleep(0.01)
-#         # 关闭启动窗口并启动主程序
-#         splash_root.destroy()
-        
-
-#     # 启动进度更新
-#     splash_root.after(10, update_progress)
-#     splash_root.mainloop()
+    # 启动进度更新
+    splash_root.after(10, update_progress)
+    splash_root.mainloop()
 
 
 if __name__ == "__main__":
-    # show_splash_screen()
-    main()
+    show_splash_screen()
+
 # """
 # PRTS代理指挥启动器
 # 用于测试和运行PRTS代理指挥工具
