@@ -35,6 +35,11 @@ class PRTSGui:
         # 标题图片路径（预留）
         self.title_image_path = os.path.join(os.path.dirname(__file__), "icon", "title.png")
         
+        # 初始化模块实例（避免重复初始化）
+        self.base_manager = BaseManagementModule()
+        self.combat_manager = CombatModule()
+        self.task_manager = TaskManagementModule()
+        
         # 初始化日志窗口
         self.init_log_window()
         
@@ -843,12 +848,9 @@ class PRTSGui:
             # 隐藏窗口
             self.root.withdraw()
             
-            # 创建基建管理模块实例
-            base_manager = BaseManagementModule()
-            
-            # 导航到基建
+            # 使用已初始化的基建管理模块实例
             logger.info("正在导航到基建...")
-            if not base_manager.navigate_to_base(threshold=threshold):
+            if not self.base_manager.navigate_to_base(threshold=threshold):
                 logger.error("无法导航到基建")
                 messagebox.showerror("失败", "无法导航到基建")
                 return
@@ -856,7 +858,7 @@ class PRTSGui:
             
             logger.info("正在尝试完成事项...")
             # 完成事项
-            success = base_manager.complete_tasks(threshold=threshold)
+            success = self.base_manager.complete_tasks(threshold=threshold)
             
             if success:
                 logger.info("完成事项成功!")
@@ -904,12 +906,9 @@ class PRTSGui:
             # 隐藏窗口
             self.root.withdraw()
             
-            # 创建作战模块实例
-            combat_manager = CombatModule()
-            
-            # 导航到作战界面
+            # 使用已初始化的作战模块实例
             logger.info("正在导航到作战界面...")
-            if not combat_manager.navigate_to_mission(threshold=threshold):
+            if not self.combat_manager.navigate_to_mission(threshold=threshold):
                 logger.error("无法导航到作战界面")
                 messagebox.showerror("失败", "无法导航到作战界面")
                 return
@@ -917,7 +916,7 @@ class PRTSGui:
             
             # 导航到常态事务
             logger.info("正在导航到常态事务...")
-            if not combat_manager.navigate_to_normal_affairs(threshold=threshold):
+            if not self.combat_manager.navigate_to_normal_affairs(threshold=threshold):
                 logger.error("无法导航到常态事务")
                 messagebox.showerror("失败", "无法导航到常态事务")
                 return
@@ -925,7 +924,7 @@ class PRTSGui:
             
             # 导航到剿灭作战
             logger.info("正在导航到剿灭作战...")
-            if not combat_manager.navigate_to_eliminate(threshold=threshold):
+            if not self.combat_manager.navigate_to_eliminate(threshold=threshold):
                 logger.error("无法导航到剿灭作战")
                 messagebox.showerror("失败", "无法导航到剿灭作战")
                 return
@@ -936,17 +935,17 @@ class PRTSGui:
             logger.info(f"正在导航到{selected_level}...")
             
             if selected_level == "龙门外环":
-                if not combat_manager.navigate_to_longmen(threshold=threshold):
+                if not self.combat_manager.navigate_to_longmen(threshold=threshold):
                     logger.error(f"无法导航到{selected_level}")
                     messagebox.showerror("失败", f"无法导航到{selected_level}")
                     return
             elif selected_level == "龙门市区":
-                if not combat_manager.navigate_to_longmen_city(threshold=threshold):
+                if not self.combat_manager.navigate_to_longmen_city(threshold=threshold):
                     logger.error(f"无法导航到{selected_level}")
                     messagebox.showerror("失败", f"无法导航到{selected_level}")
                     return
             elif selected_level == "当期委托地点":
-                if not combat_manager.navigate_to_current_commission(threshold=threshold):
+                if not self.combat_manager.navigate_to_current_commission(threshold=threshold):
                     logger.error(f"无法导航到{selected_level}")
                     messagebox.showerror("失败", f"无法导航到{selected_level}")
                     return
@@ -961,7 +960,7 @@ class PRTSGui:
             
             # 检查并启用代理指挥
             logger.info("正在检查并启用代理指挥...")
-            acting_commander_success = combat_manager.check_and_enable_acting_commander(threshold=threshold)
+            acting_commander_success = self.combat_manager.check_and_enable_acting_commander(threshold=threshold)
             if not acting_commander_success:
                 logger.error("无法启用代理指挥")
                 messagebox.showerror("失败", "无法启用代理指挥")
@@ -972,9 +971,9 @@ class PRTSGui:
             logger.info(f"开始作战循环，轮次: {cycles}, 最大模式: {max_mode}")
             
             # 无论是否选择最大模式，都检测理智
-            remaining_sanity = combat_manager.recognize_remaining_sanity()
-            consuming_sanity = combat_manager.recognize_consuming_sanity()
-            executable_times = combat_manager.calculate_executable_times()
+            remaining_sanity = self.combat_manager.recognize_remaining_sanity()
+            consuming_sanity = self.combat_manager.recognize_consuming_sanity()
+            executable_times = self.combat_manager.calculate_executable_times()
             
             logger.info(f"剩余理智: {remaining_sanity}, 消耗理智: {consuming_sanity}, 可执行次数: {executable_times}")
             
@@ -994,7 +993,7 @@ class PRTSGui:
                 return
             
             # 执行作战循环
-            success = combat_manager.combat_only_flow(cycles=cycles, threshold=threshold)
+            success = self.combat_manager.combat_only_flow(cycles=cycles, threshold=threshold)
             
             if success:
                 logger.info(f"自动剿灭作战完成，共执行 {cycles} 轮")
@@ -1106,12 +1105,9 @@ class PRTSGui:
             # 隐藏窗口
             self.root.withdraw()
             
-            # 创建任务管理模块实例
-            task_manager = TaskManagementModule()
-            
             logger.info("正在尝试领取任务奖励...")
-            # 领取任务奖励
-            success = task_manager.claim_all_rewards()
+            # 使用已初始化的任务管理模块实例领取奖励
+            success = self.task_manager.claim_all_rewards()
             
             if success:
                 logger.info("领取任务奖励成功!")

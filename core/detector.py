@@ -21,12 +21,28 @@ class Detector:
         Args:
             template_dir (str): 模板图像所在目录
         """
-        # 初始化EasyOCR读取器
-        try:
-            # 语言设置为中文和英文
-            self.reader = easyocr.Reader(['ch_sim', 'en'])
-        except Exception as e:
-            raise ImageRecognitionError(f"EasyOCR初始化失败: {str(e)}")
+        # 延迟初始化EasyOCR读取器
+        self.reader = None
+
+        # 设置模板目录
+        if template_dir:
+            self.template_dir = os.path.normpath(template_dir)
+        else:
+            project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            self.template_dir = os.path.normpath(os.path.join(project_root, 'templates'))
+        # 确保模板目录存在
+        if not os.path.exists(self.template_dir):
+            raise FileNotFoundError(f"模板目录不存在: {self.template_dir}")
+
+    def _init_ocr(self):
+        """初始化OCR读取器（延迟加载）"""
+        if self.reader is None:
+            try:
+                # 语言设置为中文和英文
+                self.reader = easyocr.Reader(['ch_sim', 'en'])
+                logger.info("EasyOCR读取器初始化成功")
+            except Exception as e:
+                raise ImageRecognitionError(f"EasyOCR初始化失败: {str(e)}")
 
         # 设置模板目录
         if template_dir:
@@ -227,6 +243,9 @@ class Detector:
             ImageRecognitionError: 文字识别失败时抛出
         """
         try:
+            # 确保OCR读取器已初始化
+            self._init_ocr()
+            
             # 确保图像是RGB格式
             if len(image.shape) == 3 and image.shape[2] == 3:
                 # EasyOCR直接处理BGR格式图像
