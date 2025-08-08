@@ -11,28 +11,53 @@ PRTS Acting Commander 是一个为明日方舟设计的自动化工具，灵感�
 - **可视化界面**：提供简洁直观的图形用户界面
 - **配置灵活**：支持自定义各种功能参数
 - **日志系统**：详细记录工具运行状态和操作
+- **GPU 加速**：支持 GPU 加速的图像识别（如果系统有兼容的 GPU）
 
 ## 项目结构
 
 ```
 PRTS Acting Commander/
+├── .gitignore
+├── LICENSE
+├── README.md
 ├── config/           # 配置文件
+│   ├── __pycache__/
+│   └── settings.py
 ├── core/             # 核心功能模块
+│   ├── __init__.py
+│   ├── __pycache__/
 │   ├── controller.py # 控制器
 │   ├── detector.py   # 图像识别模块
 │   └── exceptions.py # 自定义异常
 ├── gui/              # 图形界面
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── icon/
+│   └── main_gui.py
 ├── logs/             # 日志文件
 ├── modules/          # 功能模块
+│   ├── __init__.py
+│   ├── __pycache__/
 │   ├── base_management.py # 基建管理
 │   ├── combat.py     # 战斗系统
 │   ├── mission.py    # 任务系统
 │   ├── recruit.py    # 招募系统
 │   └── task_management.py # 任务管理
-├── templates/        # 图像模板
-├── utils/            # 工具函数
+├── requirements.txt  # 依赖列表
 ├── run.py            # 程序入口
-└── test_combat_flow.py # 测试文件
+├── templates/        # 图像模板
+├── test_combat_flow.py # 测试文件
+├── test_recruit.py
+├── test_recruit_integration.py
+├── test_recruit_slots.py
+├── test_recruit_tag_click.py
+├── test_recruit_tag_handling.py
+├── test_tag_coordinate_click.py
+├── test_text_recognition.py
+└── utils/            # 工具函数
+    ├── __init__.py
+    ├── __pycache__/
+    └── logger.py
 ```
 
 ## 安装说明
@@ -43,7 +68,6 @@ PRTS Acting Commander/
    ```bash
    pip install -r requirements.txt
    ```
-   *注：如果没有 requirements.txt 文件，请手动安装以下依赖：opencv-python, pyautogui, pillow, pyyaml, logging, tkinter*
 
 ## 使用方法
 
