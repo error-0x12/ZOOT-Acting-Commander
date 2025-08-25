@@ -1,0 +1,30 @@
+/.vscode
+
+# 排除大文件
+core/Tesseract-OCR/libtesseract-5.dll
+ZOOT--beta/ZOOT Acting Commander.exe
+ZOOT_v0.1.0--beta.zip
+build/run/ZOOT Acting Commander.pkg
+
+# 排除构建目录和日志
+/build/
+/logs/
+ZOOT--beta/logs/
+
+# 排除临时文件和缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 排除IDE相关文件
+.idea/
+*.suo
+*.ntvs*/*.njsproj
+*.sln
+*.sw?
+
+# 排除可执行文件
+*.exe
+*.pkg
+*.zip
